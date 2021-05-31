@@ -1,0 +1,1 @@
+<view class="tabs_title"><view class="title_item  {{item.isActive?'active':''}}" bindtap="handleItemTap" data-index></view><view class="tabs_content"></view></view>
