@@ -1,7 +1,7 @@
 <template>
 	<view class="tabs">
-		<view class="tabs_title"  v-for="(item,index) in tabs" :key="index"
-			 >
+		<view class="tabs_title" :class="currentIndex== index?'active':''"  v-for="(item,index) in tabs" :key="index"
+			@click="changeTab(index) ">
 				<view class='tabs_item'>{{item}}</view>
 				
 		</view>
@@ -18,6 +18,7 @@
 		name: "Tabs",
 		data() {
 			return {
+				 currentIndex:0
 				// ces:{zna:"ss"}
 			};
 		},
@@ -29,8 +30,8 @@
 			}
 		},
 		methods: {
-			changeTab() {
-				
+			changeTab(index) {
+				this.currentIndex=index;
 			},
 			
 		}
@@ -61,7 +62,7 @@
 		margin: 20rpx auto;
 	}
 	.active{
-		
+		background-color: red;
 	}
 	
 	

@@ -21,6 +21,8 @@
 		
 		
 		
+		
+		
 	</view>
 </template>
 
@@ -85,15 +87,19 @@
 	
 	//cates
 	.index_cate{
-		
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		navigator{
 			flex:1;
 			image{
+				padding: 5rpx;
 				width: 100%;
 			}
 		}
 	}
+	
+	
+	
+	
 </style>
