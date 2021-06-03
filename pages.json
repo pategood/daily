@@ -13,7 +13,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-wei",
-		"navigationBarBackgroundColor": "#000000",
+		"navigationBarBackgroundColor": "#424242",
 		"backgroundColor": "#FFFFFF"
 	}
 }

@@ -13,6 +13,12 @@
 </script>
 
 <style>
-	
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	ul,p{
+		margin: 0;
+	}
 	/*每个页面公共css */
 </style>
