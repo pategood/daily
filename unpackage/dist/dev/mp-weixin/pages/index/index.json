@@ -2,6 +2,7 @@
   "navigationBarTitleText": "首页",
   "usingComponents": {
     "tabs": "/components/Tabs",
-    "search": "/components/Search"
+    "search": "/components/Search",
+    "cates": "/components/Cates"
   }
 }

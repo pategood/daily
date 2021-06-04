@@ -46,6 +46,7 @@
 
 <style lang="scss">
 	.tabs {
+		
 		color: #fd7103;
 		height: 100%;
 		line-height: 100%;
@@ -53,6 +54,7 @@
 		justify-content: center;
 		align-items: center;
 		margin: 0 10rpx 0 10rpx;
+		border-radius: 200rpx;
 		// background-color: red;
 	}
 
@@ -62,7 +64,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: #e8e8e8;
-
+		
 	}
 
 	.tab_item {

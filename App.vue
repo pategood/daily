@@ -20,5 +20,8 @@
 	ul,p{
 		margin: 0;
 	}
+	* {
+		box-sizing: border-box;
+	}
 	/*每个页面公共css */
 </style>

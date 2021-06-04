@@ -151,7 +151,7 @@ var _default2 =
   methods: {
     changeTab: function changeTab(index) {
       this.currentIndex = index;
-      console.log(index);
+      // console.log(index)
 
     } } };exports.default = _default2;
 

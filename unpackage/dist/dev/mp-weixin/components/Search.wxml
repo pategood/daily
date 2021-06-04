@@ -1,1 +1,1 @@
-<view><view><view class="search_box"><navigator url="../pages/search/index"><image class="iconfont icon-search" src mode></image><view class="_p">大家正在搜索:znq</view></navigator></view></view></view>
+<view><view><view class="searchCnt"><navigator class="search_box" url="../pages/search/index"><image src="../static/img/icons/search.png" mode="widthFix"></image><view class="_p">深圳出现特大暴雨</view></navigator></view></view></view>
