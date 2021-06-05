@@ -2,7 +2,7 @@
 	<view>
 		<view >
 			<view class="searchCnt">
-				<navigator url="../pages/search/index" class="search_box">
+				<navigator url="../pages/search/index" open-type="navigate" class="search_box">
 					<image src="../static/img/icons/search.png" mode="widthFix"></image>
 					<p>深圳出现特大暴雨</p>
 				</navigator>

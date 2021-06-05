@@ -1,0 +1,82 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"update": true,
+		"create": true
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（用户 ID），系统自动生成"
+		},
+		"username": {
+			"bsonType": "string",
+			"title": "用户名",
+			"description": "用户名，不允许重复",
+			"trim": "both"
+		},
+		"password": {
+			"bsonType": "string",
+			"title": "密码",
+			"description": "密码,加密存储",
+			"minLength": "4",
+			"maxLength": "20",
+			"errorMessage": {
+				"required": "{title}不能为空",
+				"minLength": "{title}最小长度不能为{minLength}",
+				"maxLength": "{title}最大长度不能为{maxLength}"
+			},
+			"trim": "both"
+		},
+		"nickname": {
+			"bsonType": "string",
+			"title": "昵称",
+			"description": "用户昵称",
+			"trim": "both"
+		},
+		"gender": {
+			"bsonType": "int",
+			"title": "性别",
+			"description": "用户性别：0 未知 1 男性 2 女性",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "未知",
+				"value": 0
+			}, {
+				"text": "男",
+				"value": 1
+			}, {
+				"text": "女",
+				"value": 2
+			}]
+		},
+		"mobile": {
+			"bsonType": "string",
+			"title": "手机号码",
+			"description": "手机号码",
+			"pattern": "^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$",
+			"trim": "both"
+		},
+		"email": {
+			"bsonType": "string",
+			"format": "email",
+			"title": "邮箱",
+			"description": "邮箱地址",
+			"trim": "both"
+		},
+		"email_confirmed": {
+			"bsonType": "int",
+			"description": "邮箱验证状态：0 未验证 1 已验证",
+			"title": "邮箱验证状态",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "未验证",
+				"value": 0
+			}, {
+				"text": "已验证",
+				"value": 1
+			}]
+		}
+	}
+}

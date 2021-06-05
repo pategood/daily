@@ -1,6 +1,7 @@
 <template>
 	<view class="container">
-		<Search></Search>
+
+		<Search ></Search>
 		<Tabs :tabs='Tabs' />
 
 		<swiper :indicator-dots="indicatorDots" :autoplay="true">
@@ -18,7 +19,6 @@
 			</navigator>
 		</view> -->
 
-		<!-- <Cates></Cates> -->
 
 
 		<view class="menu_content">
@@ -146,6 +146,11 @@
 
 		onLoad() {
 			this.getCateList();
+			// uniCloud.callFunction({
+			// 	name:"getUser"
+			// }).then((res)=>{
+			// 	console.log("aaa",res)
+			// })
 		},
 		methods: {
 			async getCateList() {
@@ -155,7 +160,9 @@
 				}).then(res => {
 					this.catesList = res;
 				});
-			}
+			},
+			
+			
 		}
 	}
 </script>
@@ -163,9 +170,6 @@
 <style lang="scss">
 	@import url("../../styles/iconfonts.css");
 
-	// .container {
-	// 	// margin: 0 10rpx 0 10rpx;
-	// }
 
 	swiper {
 		padding: 0 10rpx 0 10rpx;

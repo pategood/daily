@@ -8,7 +8,14 @@
 					"titleNView":false
 				}
 			}
+		},
+		{
+			"path":"pages/search/index"
 		}
+		// {
+		// 	"path":"pages/palylist/index"
+		// }
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
