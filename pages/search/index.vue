@@ -43,7 +43,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import url("../../styles/iconfonts.css");
+	@import url("../../styles/iconfonts1.css");
 
 	.search {
 		padding: 20rpx;
@@ -53,14 +53,18 @@
 			height: 60rpx;
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 			border-radius: 10rpx;
 			overflow: hidden;
 
 			.iconfont {
 				height: 80rpx;
 				line-height: 80rpx;
+				margin-top: 5rpx;
 				width: 60rpx;
 				display: block;
+				// display:flex;
+				
 				text-align: center;
 				color: #999;
 			}

@@ -106,13 +106,13 @@ var components
 try {
   components = {
     Search: function() {
-      return __webpack_require__.e(/*! import() | components/Search/Search */ "components/Search/Search").then(__webpack_require__.bind(null, /*! @/components/Search/Search.vue */ 38))
+      return __webpack_require__.e(/*! import() | components/Search/Search */ "components/Search/Search").then(__webpack_require__.bind(null, /*! @/components/Search/Search.vue */ 50))
     },
     Tabs: function() {
-      return __webpack_require__.e(/*! import() | components/Tabs/Tabs */ "components/Tabs/Tabs").then(__webpack_require__.bind(null, /*! @/components/Tabs/Tabs.vue */ 45))
+      return __webpack_require__.e(/*! import() | components/Tabs/Tabs */ "components/Tabs/Tabs").then(__webpack_require__.bind(null, /*! @/components/Tabs/Tabs.vue */ 57))
     },
     Swiper: function() {
-      return __webpack_require__.e(/*! import() | components/Swiper/Swiper */ "components/Swiper/Swiper").then(__webpack_require__.bind(null, /*! @/components/Swiper/Swiper.vue */ 52))
+      return __webpack_require__.e(/*! import() | components/Swiper/Swiper */ "components/Swiper/Swiper").then(__webpack_require__.bind(null, /*! @/components/Swiper/Swiper.vue */ 64))
     }
   }
 } catch (e) {
@@ -164,158 +164,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/Vue/miniApp/Uniapp/daily/daily/pages/index/index.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs/Tabs */ "components/Tabs/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../components/Tabs/Tabs.vue */ 45));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Cates = function Cates() {__webpack_require__.e(/*! require.ensure | components/Cates/Cates */ "components/Cates/Cates").then((function () {return resolve(__webpack_require__(/*! ../../components/Cates/Cates.vue */ 59));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/Search/Search */ "components/Search/Search").then((function () {return resolve(__webpack_require__(/*! ../../components/Search/Search.vue */ 38));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Swiper = function Swiper() {__webpack_require__.e(/*! require.ensure | components/Swiper/Swiper */ "components/Swiper/Swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/Swiper/Swiper.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  data: function data() {
-    return {
-      Tabs: ['精选', '电视剧', '综艺', '电影', '动漫'],
-      catesList: [] };
-
-  },
-  components: {
-    Tabs: Tabs,
-    Search: Search,
-    Cates: Cates,
-    Swiper: Swiper },
-
-
-  onLoad: function onLoad() {
-    this.getCateList();
-  },
-  methods: {
-    getCateList: function getCateList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  _this.$request({
-                    url: "/home/catitems"
-                    // data:{}
-                  }).then(function (res) {
-                    _this.catesList = res;
-                  }));case 2:case "end":return _context.stop();}}}, _callee);}))();
-    } } };exports.default = _default;
+throw new Error("Module build failed (from ./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js):\nError: 组件 Location 引用错误,仅支持 import 方式引入组件\n    at names.forEach (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@dcloudio\\webpack-uni-mp-loader\\lib\\babel\\util.js:37:13)\n    at Array.forEach (<anonymous>)\n    at parseComponents (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@dcloudio\\webpack-uni-mp-loader\\lib\\babel\\util.js:31:9)\n    at handleComponentsObjectExpression (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@dcloudio\\webpack-uni-mp-loader\\lib\\babel\\scoped-component-traverse.js:59:22)\n    at handleObjectExpression (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@dcloudio\\webpack-uni-mp-loader\\lib\\babel\\scoped-component-traverse.js:52:5)\n    at ExportDefaultDeclaration (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@dcloudio\\webpack-uni-mp-loader\\lib\\babel\\scoped-component-traverse.js:153:9)\n    at NodePath._call (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\path\\context.js:55:20)\n    at NodePath.call (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\path\\context.js:42:17)\n    at NodePath.visit (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\path\\context.js:90:31)\n    at TraversalContext.visitQueue (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\context.js:112:16)\n    at TraversalContext.visitMultiple (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\context.js:79:17)\n    at TraversalContext.visit (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\context.js:138:19)\n    at Function.traverse.node (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\index.js:84:17)\n    at NodePath.visit (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\path\\context.js:97:18)\n    at TraversalContext.visitQueue (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\context.js:112:16)\n    at TraversalContext.visitSingle (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\traverse\\lib\\context.js:84:19)");
 
 /***/ }),
 /* 20 */,
@@ -341,11 +192,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/Vue/miniApp/Uniapp/daily/daily/pages/index/index.vue?vue&type=style&index=0&lang=scss& ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-// extracted by mini-css-extract-plugin
-    if(false) { var cssReload; }
-  
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\nError: Failed to find '../../styles/iconfonts.css'\n  in [\n    E:\\Vue\\miniApp\\Uniapp\\daily\\daily\\pages\\index\n  ]\n    at resolveModule.catch.catch (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\postcss-import\\lib\\resolve-id.js:35:13)\n    at <anonymous>\n    at runLoaders (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Promise.resolve.then.then.catch (E:\\前端学习\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\postcss-loader\\src\\index.js:208:9)\n    at <anonymous>");
 
 /***/ })
 ],[[14,"common/runtime","common/vendor"]]]);

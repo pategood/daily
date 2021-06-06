@@ -156,7 +156,7 @@ var _default =
     this.getLog(_this);
   },
   methods: {
-    getLog: function getLog(_this) {var _this2 = this;
+    getLog: function getLog(_this) {
       uniCloud.callFunction({
         name: 'getIndexData',
         data: {
@@ -166,8 +166,8 @@ var _default =
       then(function (res) {
         _this.arr = res.result.data[0].arr;
         console.log("1");
-        console.log(_this2);
-        console.log(_this);
+        // console.log(this);
+        // console.log(_this);
       });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 31)["default"]))

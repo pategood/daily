@@ -112,12 +112,16 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   border-radius: 10rpx;
   overflow: hidden;
 }
 .search .search_top .iconfont.data-v-482e85b8 {
   height: 80rpx;
   line-height: 80rpx;
+  margin-top: 5rpx;
   width: 60rpx;
   display: block;
   text-align: center;

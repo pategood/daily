@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<swiper :indicator-dots="indicatorDots" :autoplay="true" circular="true" interval="3000">
+		<swiper :indicator-dots="indicatorDots" :autoplay="true" circular="true" interval="3000" @change="goGoods()">
 			<swiper-item v-for="(item,index) in bannerList" :key="index">
 				<view class="swiper-item">
 					<image :src="item" mode="widthFix"></image>
@@ -25,6 +25,11 @@
 				],
 				indicatorDots: "true",
 			};
+		},
+		methods:{
+			goGoods(){
+				
+			}
 		}
 	}
 </script>

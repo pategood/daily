@@ -110,9 +110,6 @@
 		</view>
 
 
-
-
-
 	</view>
 </template>
 
@@ -121,6 +118,7 @@
 	import Cates from "../../components/Cates/Cates.vue"
 	import Search from "../../components/Search/Search.vue"
 	import Swiper from "../../components/Swiper/Swiper.vue"
+
 	export default {
 		data() {
 			return {
@@ -132,7 +130,8 @@
 			Tabs,
 			Search,
 			Cates,
-			Swiper
+			Swiper,
+			Location
 		},
 
 		onLoad() {
@@ -152,7 +151,8 @@
 </script>
 
 <style lang="scss">
-	@import url("../../styles/iconfonts.css");
+	// @import url("../../styles/iconfonts1.css");
+	// @import url("../../styles/iconfonts.css");
 
 
 	//cates

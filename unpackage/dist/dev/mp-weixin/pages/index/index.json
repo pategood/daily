@@ -4,6 +4,7 @@
     "search": "/components/Search/Search",
     "tabs": "/components/Tabs/Tabs",
     "swiper": "/components/Swiper/Swiper",
-    "cates": "/components/Cates/Cates"
+    "cates": "/components/Cates/Cates",
+    "location": "/components/Location/location"
   }
 }

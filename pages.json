@@ -10,19 +10,70 @@
 			}
 		},
 		{
-			"path": "pages/search/index"
-		}
-		// ,
-		// {
-		// 	// "path":"pages/palylist/index"
-		// }
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"enablePullDownRefresh": false
+				// "h5": {
+				// 	"titleNView": false
+				// }
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": false
+			}
 
-	],
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/category/category",
+			"style" :                                                                                    
+			{
+					"navigationBarTitleText": "分类",
+					"enablePullDownRefresh": false
+			}
+		}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "uni-wei",
+		"navigationBarTitleText": "znq项目",
 		"navigationBarBackgroundColor": "#424242",
 		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		//设置选中图标的颜色
+		// "selectedColor":"",
+		"list": [
+			{
+			"text": "首页",
+			"pagePath": "pages/index/index",
+			"iconPath": "static/img/icons/tabar/home.png",
+			"selectedIconPath": "static/img/icons/tabar/home-s.png"
+			},{
+				"text": "分类",
+				"pagePath": "pages/category/category",
+				"iconPath": "static/img/icons/tabar/category.png",
+				"selectedIconPath": "static/img/icons/tabar/category-s.png"
+			},{
+				"text": "购物车",
+				"pagePath": "pages/cart/cart",
+				"iconPath": "static/img/icons/tabar/cart.png",
+				"selectedIconPath": "static/img/icons/tabar/cart-s.png"
+			},{
+				"text": "个人",
+				"pagePath": "pages/my/my",
+				"iconPath": "static/img/icons/tabar/my.png",
+				"selectedIconPath": "static/img/icons/tabar/my-s.png"
+			}
+		
+		]
 	},
 	// "easycom": {
 	// 	"autoscan": true,
