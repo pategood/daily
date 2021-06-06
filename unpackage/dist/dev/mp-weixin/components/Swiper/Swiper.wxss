@@ -24,29 +24,12 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.searchCnt {
-  padding: 12rpx;
-  background-color: #ffffff;
+swiper {
+  padding: 0 10rpx 0 10rpx;
+  height: calc(100vw * 300 /960);
 }
-.search_box {
-  background-color: #cecece;
-  border-radius: 10rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  height: 60rpx;
-}
-.search_box image {
-  width: 7%;
-}
-.search_box ._p {
-  margin-top: -7.5rpx;
-  margin-left: 12rpx;
+swiper image {
+  width: 100vw;
+  height: 100vh;
 }
 

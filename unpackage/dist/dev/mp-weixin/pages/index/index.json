@@ -1,8 +1,9 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "tabs": "/components/Tabs",
-    "search": "/components/Search",
-    "cates": "/components/Cates"
+    "search": "/components/Search/Search",
+    "tabs": "/components/Tabs/Tabs",
+    "swiper": "/components/Swiper/Swiper",
+    "cates": "/components/Cates/Cates"
   }
 }

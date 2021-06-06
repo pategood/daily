@@ -103,6 +103,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    Search: function() {
+      return __webpack_require__.e(/*! import() | components/Search/Search */ "components/Search/Search").then(__webpack_require__.bind(null, /*! @/components/Search/Search.vue */ 38))
+    },
+    Tabs: function() {
+      return __webpack_require__.e(/*! import() | components/Tabs/Tabs */ "components/Tabs/Tabs").then(__webpack_require__.bind(null, /*! @/components/Tabs/Tabs.vue */ 45))
+    },
+    Swiper: function() {
+      return __webpack_require__.e(/*! import() | components/Swiper/Swiper */ "components/Swiper/Swiper").then(__webpack_require__.bind(null, /*! @/components/Swiper/Swiper.vue */ 52))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -138,8 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs */ "components/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../components/Tabs.vue */ 25));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Cates = function Cates() {__webpack_require__.e(/*! require.ensure | components/Cates */ "components/Cates").then((function () {return resolve(__webpack_require__(/*! ../../components/Cates.vue */ 32));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/Search */ "components/Search").then((function () {return resolve(__webpack_require__(/*! ../../components/Search.vue */ 39));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs/Tabs */ "components/Tabs/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../components/Tabs/Tabs.vue */ 45));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Cates = function Cates() {__webpack_require__.e(/*! require.ensure | components/Cates/Cates */ "components/Cates/Cates").then((function () {return resolve(__webpack_require__(/*! ../../components/Cates/Cates.vue */ 59));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/Search/Search */ "components/Search/Search").then((function () {return resolve(__webpack_require__(/*! ../../components/Search/Search.vue */ 38));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Swiper = function Swiper() {__webpack_require__.e(/*! require.ensure | components/Swiper/Swiper */ "components/Swiper/Swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/Swiper/Swiper.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -266,18 +294,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       Tabs: ['精选', '电视剧', '综艺', '电影', '动漫'],
-      indicatorDots: "true",
-      bannerList: [
-      "/static/img/banner/3.jpg",
-      "/static/img/banner/4.jpeg"],
-
       catesList: [] };
 
   },
   components: {
     Tabs: Tabs,
     Search: Search,
-    Cates: Cates },
+    Cates: Cates,
+    Swiper: Swiper },
 
 
   onLoad: function onLoad() {

@@ -12,7 +12,12 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+	// @import "cl-uni/index.scss";
+	page{
+		width: 100%;
+		height: 100%;
+	}
 	body{
 		padding: 0;
 		margin: 0;

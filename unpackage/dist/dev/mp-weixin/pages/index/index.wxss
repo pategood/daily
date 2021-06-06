@@ -100,14 +100,6 @@
 .icon-B-10:before {
   content: "\e62d";
 }
-swiper {
-  padding: 0 10rpx 0 10rpx;
-  height: calc(100vw * 300 /960);
-}
-swiper image {
-  width: 100vw;
-  height: 100vh;
-}
 .index_cate {
   display: -webkit-box;
   display: -webkit-flex;
@@ -141,7 +133,7 @@ swiper image {
           flex-wrap: wrap;
 }
 .menu_content .menu_item {
-  width: 18.99%;
+  width: 18%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -169,7 +161,7 @@ swiper image {
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
   border-top: 2rpx solid #dddddd;
-  padiing: 0 5rpx;
+  padding: 0 5rpx;
 }
 .hot_item {
   padding: 15rpx;
@@ -238,11 +230,15 @@ swiper image {
   font-size: 14px;
   margin-right: 20rpx;
 }
-.thteme_Container {
+.thteme_content {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   padding: 20rpx;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  padding: 20rpx;
+  overflow-x: auto;
 }
 .groupItem {
   display: -webkit-box;
@@ -252,5 +248,21 @@ swiper image {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-right: 20rpx;
+  width: 90%;
+  height: 90%;
+}
+.groupItem image {
+  border-radius: 25rpx;
+}
+.groupItem ._p {
+  width: 100%;
+  border: 2rpx solid #dddddd;
+  border-top: none;
+  padding: 20rpx;
+  font-size: 14px;
 }
 

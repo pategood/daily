@@ -2,8 +2,8 @@
 	<view>
 		<view >
 			<view class="searchCnt">
-				<navigator url="../pages/search/index" open-type="navigate" class="search_box">
-					<image src="../static/img/icons/search.png" mode="widthFix"></image>
+				<navigator url="../../pages/search/index" open-type="navigate" class="search_box">
+					<image src="../../static/img/icons/search.png" mode="widthFix"></image>
 					<p>深圳出现特大暴雨</p>
 				</navigator>
 			</view>
@@ -37,7 +37,7 @@
 		align-items: center;
 		height: 60rpx;
 		image{
-			width:7%;
+			width:6%;
 			// height:7%;
 		}
 		p{

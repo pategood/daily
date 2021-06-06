@@ -4,23 +4,42 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"h5":{
-					"titleNView":false
+				"h5": {
+					"titleNView": false
 				}
 			}
 		},
 		{
-			"path":"pages/search/index"
+			"path": "pages/search/index"
 		}
+		// ,
 		// {
-		// 	"path":"pages/palylist/index"
+		// 	// "path":"pages/palylist/index"
 		// }
-		
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-wei",
 		"navigationBarBackgroundColor": "#424242",
 		"backgroundColor": "#FFFFFF"
+	},
+	// "easycom": {
+	// 	"autoscan": true,
+	// 	"custom": {
+	// 		// 1.1.0 版本前:
+	// 		// "cl-(.*)": "cl-uni/components/$1/$1.vue"
+
+	// 		// 1.1.0 版本后:
+	// 		"cl-(.*)": "cl-uni/components/cl-$1/cl-$1.vue"
+	// 	}
+	// },
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
 	}
 }
