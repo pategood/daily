@@ -1,8 +1,8 @@
 <template>
 	<view class="search">
 		<view class="search_top">
-			<i class="iconfont icon-search"></i>
-			<input type="text" placeholder="搜索">
+			<i class="iconfont icon-search" style="color: #333333;"></i>
+			<input type="text" placeholder="搜索" disabled="true">
 		</view>
 		<view class="search_title">大家都在搜</view>
 		<view class="search_keywords">

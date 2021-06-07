@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2578268 */
-  src: url('//at.alicdn.com/t/font_2578268_hco8he6ac4.woff2?t=1622993976911') format('woff2'),
-       url('//at.alicdn.com/t/font_2578268_hco8he6ac4.woff?t=1622993976911') format('woff'),
-       url('//at.alicdn.com/t/font_2578268_hco8he6ac4.ttf?t=1622993976911') format('truetype');
+  src: url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.woff2?t=1623412220396') format('woff2'),
+       url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.woff?t=1623412220396') format('woff'),
+       url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.ttf?t=1623412220396') format('truetype');
 }
 
 .iconfont {
@@ -13,8 +13,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dianzan:before {
+  content: "\e60c";
+	font-size: 45rpx;
+}
+
+//1
+.icon-dianzan-s:before {
+  content: "\eb10";
+	font-size: 45rpx;
+	color: #fee082;
+}
+
+.icon-release1:before {
+  content: "\e618";
+}
+
+//1
+.icon-release:before {
+  content: "\e614";
+	color:#1296db;
+}
+
 .icon-wodedizhi:before {
   content: "\e613";
+	color: #669cfe;
 }
 
 .icon-erweima:before {

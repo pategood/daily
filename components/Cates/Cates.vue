@@ -4,7 +4,7 @@
 		<view class="index_cate" >
 			<navigator url="../pages/playlist/index" v-for="item in catesList" 
 				class="cates" :key="item.name">
-				<image :src="item.image_src" mode="widthFix"></image>
+				<image class"img" :src="item.image_src" mode="widthFix"></image>
 			</navigator>
 		</view>
 	</view>
@@ -36,7 +36,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.container{
 		margin: 0 10rpx 0 10rpx;
 	}
@@ -45,9 +45,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		navigator{
+		.cates{
 			flex:1;
-			image{
+			.img{
 				padding: 6rpx;
 				width: 100%;
 			}

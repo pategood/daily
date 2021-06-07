@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/Search/Search":1,"components/Swiper/Swiper":1,"components/Tabs/Tabs":1,"components/Location/location":1};
+/******/ 		var cssChunks = {"components/Cates/Cates":1,"components/Movies/Movies":1,"components/Scroll/Scroll":1,"components/Search/Search":1,"components/Swiper/Swiper":1,"components/Tabs/Tabs":1,"components/Location/location":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/Search/Search":"components/Search/Search","components/Swiper/Swiper":"components/Swiper/Swiper","components/Tabs/Tabs":"components/Tabs/Tabs","components/Location/location":"components/Location/location"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/Cates/Cates":"components/Cates/Cates","components/Movies/Movies":"components/Movies/Movies","components/Scroll/Scroll":"components/Scroll/Scroll","components/Search/Search":"components/Search/Search","components/Swiper/Swiper":"components/Swiper/Swiper","components/Tabs/Tabs":"components/Tabs/Tabs","components/Location/location":"components/Location/location"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

@@ -24,11 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.searchCnt {
+.searchCnt.data-v-27f38178 {
   padding: 12rpx;
   background-color: #ffffff;
 }
-.search_box {
+.search_box.data-v-27f38178 {
   background-color: #cecece;
   border-radius: 10rpx;
   display: -webkit-box;
@@ -42,10 +42,10 @@
           align-items: center;
   height: 60rpx;
 }
-.search_box image {
+.search_box .img.data-v-27f38178 {
   width: 6%;
 }
-.search_box ._p {
+.search_box ._p.data-v-27f38178 {
   margin-top: -7.5rpx;
   margin-left: 12rpx;
 }

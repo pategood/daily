@@ -9,10 +9,12 @@ export const request=(options)=>{
 		mask: true,
 	});
 	const baseUrl="https://api-hmugo-web.itheima.net/api/public/v1";
+	const baseUrl1="https://api-hmugo-web.itheima.net/api/public/v1";
 	return new Promise((resolve,reject)=>{
 		uni.request({
 			...options,
 			url:baseUrl+options.url,
+			// url:(baseUrl+options.url) || (baseUrl1),
 			// method: options.method || 'post',
 			// data: options.data || {},
 			success: (res)=>{

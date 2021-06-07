@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container {
+.container.data-v-8c2b64e4 {
   margin: 0 10rpx 0 10rpx;
 }
-.index_cate {
+.index_cate.data-v-8c2b64e4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -38,12 +38,12 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.index_cate navigator {
+.index_cate .cates.data-v-8c2b64e4 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
 }
-.index_cate navigator image {
+.index_cate .cates .img.data-v-8c2b64e4 {
   padding: 6rpx;
   width: 100%;
 }

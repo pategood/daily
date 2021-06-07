@@ -82,13 +82,13 @@
 
 
 		<!-- 学习之夜 栏目 -->
-		<view class="theme_box">
+		<!-- <view class="theme_box">
 			<view class="theme_title">
 				<p class="titleMain">学习狂欢</p>
 				<p class="title">学习打卡 call</p>
 			</view>
 
-			<!-- 滚动组 -->
+			滚动组
 			<view class="thteme_content">
 				<view class="groupItem">
 					<image src="../../static/img/video/gaoxiao.png" mode="aspectFill	"></image>
@@ -107,9 +107,17 @@
 					<p>一起狂欢</p>
 				</view>
 			</view>
-		</view>
+		</view> -->
+		<Scroll></Scroll>
+
+		<!-- 轮播图 -->
+		<!-- <swiper2></swiper2> -->
 
 
+		<!-- 休息一下 -->
+		<Movies></Movies>
+		
+		
 	</view>
 </template>
 
@@ -118,6 +126,10 @@
 	import Cates from "../../components/Cates/Cates.vue"
 	import Search from "../../components/Search/Search.vue"
 	import Swiper from "../../components/Swiper/Swiper.vue"
+	// import Swiper2 from "../../components/Swiper2/Swiper2.vue"
+	import Scroll from "../../components/Scroll/Scroll.vue"
+	import Movies from "../../components/Movies/Movies.vue"
+	
 
 	export default {
 		data() {
@@ -131,7 +143,9 @@
 			Search,
 			Cates,
 			Swiper,
-			Location
+			Scroll,
+			Movies
+			// Swiper2
 		},
 
 		onLoad() {

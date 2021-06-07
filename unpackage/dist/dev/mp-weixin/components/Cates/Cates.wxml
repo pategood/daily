@@ -1,1 +1,1 @@
-<view><view class="index_cate"><block wx:for="{{catesList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="name"><navigator class="cates" url="../pages/playlist/index"><image src="{{item.image_src}}" mode="widthFix"></image></navigator></block></view></view>
+<view class="data-v-8c2b64e4"><view class="index_cate data-v-8c2b64e4"><block wx:for="{{catesList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="name"><navigator class="cates data-v-8c2b64e4" url="../pages/playlist/index">"img" :src="item.image_src" mode="widthFix"></navigator></block></view></view>

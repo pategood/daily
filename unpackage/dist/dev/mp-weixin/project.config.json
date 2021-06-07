@@ -28,9 +28,9 @@
       "list": [
         {
           "name": "",
-          "path": "",
           "query": "",
-          "id": 0
+          "id": 0,
+          "pathName": "pages/index/index"
         }
       ]
     }

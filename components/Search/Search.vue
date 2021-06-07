@@ -3,7 +3,7 @@
 		<view >
 			<view class="searchCnt">
 				<navigator url="../../pages/search/index" open-type="navigate" class="search_box">
-					<image src="../../static/img/icons/search.png" mode="widthFix"></image>
+					<image class="img" src="../../static/img/icons/search.png" mode="widthFix"></image>
 					<p>深圳出现特大暴雨</p>
 				</navigator>
 			</view>
@@ -23,7 +23,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.searchCnt{
 		padding: 12rpx;
 		background-color: #ffffff;
@@ -36,7 +36,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 60rpx;
-		image{
+		.img{
 			width:6%;
 			// height:7%;
 		}
