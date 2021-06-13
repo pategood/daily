@@ -1,12 +1,16 @@
 <template>
 	<view class="search">
-		<view class="search_top">
-			<i class="iconfont icon-search" style="color: #333333;"></i>
-			<input type="text" placeholder="搜索"  maxlength="12">
+		<view class="search_index">
+			<view class="search_top">
+				<i class="iconfont icon-search" style="color: #333333;"></i>
+				<input id="inp" type="text" placeholder="搜索" :value="inpValue.value" maxlength="12" @input="onInput"
+					@blur="offInput">
+			</view>
+			<button v-show="isFocus" class="btn" type="default" @click="handleCancel">取消</button>
 		</view>
 		<view class="search_title">大家都在搜</view>
 		<view class="search_keywords">
-			<text v-for="(item, index) in arr" :key="index">{{item}}</text>
+			<text v-for="(item, index) in logArr" :key="index">{{item}}</text>
 		</view>
 	</view>
 </template>
@@ -15,7 +19,11 @@
 	export default {
 		data() {
 			return {
-				arr: []
+				logArr: [],
+				searchValue: [],
+				isFocus: false,
+				//
+				inpValue: {value:""}
 			};
 		},
 		onPullDownRefresh() {
@@ -29,7 +37,7 @@
 		methods: {
 			getLog() {
 				uni.showLoading({
-					mask:true
+					mask: true
 				})
 				uniCloud.callFunction({
 					name: 'getIndexData',
@@ -37,16 +45,42 @@
 						myname: 'keywords'
 					},
 					success: res => {
-						this.arr = res.result.data[0].arr;
+						this.logArr = res.result.data[0].arr;
 						// console.log("1");
 						// console.log(this);
 						// console.log(_this);
 					},
-					complete:()=> {
+					complete: () => {
 						uni.hideLoading();
 						uni.stopPullDownRefresh();
 					}
 				});
+			},
+			onInput(e) {
+				this.isFocus = true;
+				console.log(e.target.value);
+				// this.inpValue = e.target.value;
+			},
+
+			offInput(e) {
+				if (!e.target.value) {
+					this.isFocus = false;
+				}
+			},
+			handleCancel() {
+				// this.$set()
+				// this.$set(this, inpValue, '')
+				console.log(this.inpValue)
+				this.$nextTick(()=>{
+				    this.inpValue = "";
+				})
+				console.log(this.inpValue)
+				// uni.showToast({
+				// 	title: "请输入正确的车牌号码",
+				// 	icon: "none",
+				// 	duration: 2000,
+				// 	mask: true
+				// });
 			}
 		}
 	}
@@ -59,6 +93,7 @@
 		padding: 20rpx;
 
 		.search_top {
+			width: 100%;
 			background: #efefef;
 			height: 60rpx;
 			display: flex;
@@ -84,6 +119,28 @@
 				height: 60rpx;
 			}
 		}
+
+		.search_index {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			;
+		}
+
+		.btn {
+			width: 110rpx;
+			padding: 0;
+			margin: 0 10rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 26rpx;
+
+		}
+
+
+
+
 
 		.search_title {
 			height: 120rpx;

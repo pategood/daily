@@ -143,11 +143,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
-      arr: [] };
+      logArr: [],
+      searchValue: [],
+      isFocus: false,
+      //
+      inpValue: "" };
 
   },
   onPullDownRefresh: function onPullDownRefresh() {
@@ -169,7 +176,7 @@ var _default =
           myname: 'keywords' },
 
         success: function success(res) {
-          _this.arr = res.result.data[0].arr;
+          _this.logArr = res.result.data[0].arr;
           // console.log("1");
           // console.log(this);
           // console.log(_this);
@@ -179,6 +186,9 @@ var _default =
           uni.stopPullDownRefresh();
         } });
 
+    },
+    onInput: function onInput() {
+      this.isFocus = true;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 31)["default"]))
 
