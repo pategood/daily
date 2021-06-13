@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -150,27 +150,37 @@ var _default =
       arr: [] };
 
   },
+  onPullDownRefresh: function onPullDownRefresh() {
+    this.getLog();
+  },
   created: function created() {
-    var _this = this;
+    // let _this = this;
     // 调用云函数
-    this.getLog(_this);
+    this.getLog();
   },
   methods: {
-    getLog: function getLog(_this) {
+    getLog: function getLog() {var _this = this;
+      uni.showLoading({
+        mask: true });
+
       uniCloud.callFunction({
         name: 'getIndexData',
         data: {
-          myname: 'keywords' } }).
+          myname: 'keywords' },
 
+        success: function success(res) {
+          _this.arr = res.result.data[0].arr;
+          // console.log("1");
+          // console.log(this);
+          // console.log(_this);
+        },
+        complete: function complete() {
+          uni.hideLoading();
+          uni.stopPullDownRefresh();
+        } });
 
-      then(function (res) {
-        _this.arr = res.result.data[0].arr;
-        console.log("1");
-        // console.log(this);
-        // console.log(_this);
-      });
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 31)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 31)["default"]))
 
 /***/ }),
 

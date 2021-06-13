@@ -51,7 +51,6 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  ​border-left: 20rpx dashed #dfdedf;
 }
 .movie_item image {
   width: 180rpx;
@@ -94,12 +93,12 @@
           flex: 1;
 }
 .praise-me {
-  font-size: 28rpx;
+  font-size: 14px;
   -webkit-align-self: center;
           align-self: center;
 }
 .animation-opacity {
   font-weight: bold;
-  opacity: 1;
+  opacity: 0;
 }
 

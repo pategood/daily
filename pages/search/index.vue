@@ -2,7 +2,7 @@
 	<view class="search">
 		<view class="search_top">
 			<i class="iconfont icon-search" style="color: #333333;"></i>
-			<input type="text" placeholder="搜索" disabled="true">
+			<input type="text" placeholder="搜索"  maxlength="12">
 		</view>
 		<view class="search_title">大家都在搜</view>
 		<view class="search_keywords">
@@ -18,25 +18,35 @@
 				arr: []
 			};
 		},
+		onPullDownRefresh() {
+			this.getLog();
+		},
 		created() {
-			let _this = this;
+			// let _this = this;
 			// 调用云函数
-			this.getLog(_this);
+			this.getLog();
 		},
 		methods: {
-			getLog(_this) {
+			getLog() {
+				uni.showLoading({
+					mask:true
+				})
 				uniCloud.callFunction({
-						name: 'getIndexData',
-						data: {
-							myname: 'keywords'
-						}
-					})
-					.then(res => {
-						_this.arr = res.result.data[0].arr;
-						console.log("1");
+					name: 'getIndexData',
+					data: {
+						myname: 'keywords'
+					},
+					success: res => {
+						this.arr = res.result.data[0].arr;
+						// console.log("1");
 						// console.log(this);
 						// console.log(_this);
-					});
+					},
+					complete:()=> {
+						uni.hideLoading();
+						uni.stopPullDownRefresh();
+					}
+				});
 			}
 		}
 	}
@@ -64,7 +74,7 @@
 				width: 60rpx;
 				display: block;
 				// display:flex;
-				
+
 				text-align: center;
 				color: #999;
 			}

@@ -4,7 +4,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"enablePullDownRefresh": true,
+				"enablePullDownRefresh": false,
 				"h5": {
 					"titleNView": false
 				},
@@ -17,7 +17,7 @@
 			"path": "pages/search/index",
 			"style": {
 				"navigationBarTitleText": "搜索",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": true
 				// "app-plus": { //app-plus 配置编译到 App 平台时的特定样式，部分常用配置 H5 平台也支持
 				// 	"titleNView": {
 				// 		// "type": "transparent", //透明渐变导航栏 App-nvue 2.4.4+ 支持

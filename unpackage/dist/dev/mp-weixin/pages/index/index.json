@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "首页",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {
     "search": "/components/Search/Search",
     "tabs": "/components/Tabs/Tabs",
