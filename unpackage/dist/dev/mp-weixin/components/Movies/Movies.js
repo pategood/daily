@@ -114,60 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -218,55 +165,64 @@ var _default =
   name: "Movies",
   data: function data() {
     return {
+      isRaise: [false, false, false],
+      // isRaise:false,
+      animationData: {},
       movieList: [{
         img: '../../static/img/movie/哥斯拉.jpg',
         title: "王猿大战精钢",
         info: "2021 / 美国 /异世界 爱情",
         producer: "本·哈登 /亨利·乔布斯 / 悠米 / 嘉文四世" },
       {
-        img: '../../static/img/movie/哥斯拉.jpg',
-        title: "历史又TM在召唤",
+        img: '../../static/img/movie/movie4.png',
+        title: "超越",
         info: "2021 / 中国 /异世界 爱情",
-        producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世" },
+        producer: "郑凯" },
       {
-        img: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2654767767.webp',
-        title: "了不起的老爸",
+        img: '../../static/img/movie/movie3.png',
+        title: "天堂电影院",
         info: "2021 / 中国 /异世界 爱情",
-        producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世" }],
+        producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世" }] };
 
-      animationData: {} };
 
   },
   methods: {
     //实现点赞
-    praiseMe: function praiseMe() {
+    praiseMe: function praiseMe(index) {
+      //法一:
+      // this.isRaise[index]= !this.isRaise[index];
+      // this.$forceUpdate();
+      //法二:
+      this.$set(this.isRaise, index, !this.isRaise[index]);
+      // this.isRaise=!this.isRaise;
+
+
+
       //构建动画数据,并且通过step来表示这组动画的完成
       // this.animation.translateX(500).step({duration:1000})
-      this.animation.translateY(-60).opacity(1).step({
-        duration: 400 });
-
+      // this.animation.translateY(-60).opacity(1).step({
+      // 	duration: 400
+      // });
       //导出动画数据到view组件,实现组件的动画效果
-      this.animationData = this.animation.export();
+      // this.animationData = this.animation.export();
 
       // 还原动画
-      setTimeout(function () {
-        this.animation.translateY(0).opacity(0).step({
-          duration: 0 });
-
-        this.animationData = this.animation.export();
-      }.bind(this), 500);
+      // setTimeout(function() {
+      // 	this.animation.translateY(0).opacity(0).step({
+      // 		duration: 0
+      // 	});
+      // 	this.animationData = this.animation.export();
+      // }.bind(this), 500)
     } },
 
   onLoad: function onLoad() {
     //页面加载之初,创建一个临时的动画
-    this.animation = uni.createAnimation();
-
+    // this.animation = uni.createAnimation();
   },
   onUnload: function onUnload() {
-    // 页面卸载的时候,清除动画数据
-    // this.animationData = {};
+    // this.animationData = {}
+    // 页面关闭后清空数据
   } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

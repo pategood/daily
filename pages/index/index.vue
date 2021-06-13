@@ -115,7 +115,9 @@
 
 		<!-- 休息一下 -->
 		<Movies></Movies>
+		<backTop :scrollTop="backTop.scrollTop" :isbottom="isbottom"></backTop>
 
+		<!-- <button type="primary" @click="tapscroll">回到顶部</button> -->
 
 	</view>
 </template>
@@ -128,13 +130,20 @@
 	// import Swiper2 from "../../components/Swiper2/Swiper2.vue"
 	import Scroll from "../../components/Scroll/Scroll.vue"
 	import Movies from "../../components/Movies/Movies.vue"
+	import backTop from '@/components/common/back-top/back-top.vue';
+
 
 
 	export default {
 		data() {
 			return {
 				Tabs: ['精选', '电视剧', '综艺', '电影', '动漫'],
-				catesList: []
+				catesList: [],
+				backTop: {
+					scrollTop: 0
+				},
+				scrollTop: 0,
+				isbottom:false
 			}
 		},
 		components: {
@@ -144,6 +153,7 @@
 			Swiper,
 			Scroll,
 			Movies,
+			backTop
 			// Swiper2
 		},
 
@@ -159,6 +169,23 @@
 					this.catesList = res;
 				});
 			},
+
+			tapscroll: function() {
+				uni.pageScrollTo({
+					scrollTop: 0,
+					duration: 150
+				})
+			}
+		},
+		onPageScroll(e) {
+			this.backTop.scrollTop = e.scrollTop;
+		},
+		
+		onReachBottom(e) {
+			this.isbottom=true
+		},
+		onReachTop(e){
+			this.isbottom=false
 		}
 	}
 </script>
@@ -167,6 +194,10 @@
 	// @import url("../../styles/iconfonts1.css");
 	// @import url("../../styles/iconfonts.css");
 
+	.container {
+		// padding-bottom: var(--window-bottom);
+		padding-bottom: calc(var(--window-bottom) + 20px);
+	}
 
 	//cates
 	.index_cate {

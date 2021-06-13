@@ -51,6 +51,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  ​border-left: 20rpx dashed #dfdedf;
 }
 .movie_item image {
   width: 180rpx;
@@ -99,6 +100,6 @@
 }
 .animation-opacity {
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
 }
 

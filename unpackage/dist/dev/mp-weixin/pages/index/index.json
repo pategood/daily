@@ -1,11 +1,13 @@
 {
   "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "search": "/components/Search/Search",
     "tabs": "/components/Tabs/Tabs",
     "swiper": "/components/Swiper/Swiper",
     "scroll": "/components/Scroll/Scroll",
     "movies": "/components/Movies/Movies",
-    "cates": "/components/Cates/Cates"
+    "cates": "/components/Cates/Cates",
+    "back-top": "/components/common/back-top/back-top"
   }
 }

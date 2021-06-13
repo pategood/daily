@@ -39,12 +39,12 @@
 }
 .icon-dianzan.data-v-b9cdb4f8:before {
   content: "\e60c";
-	font-size: 45rpx;
+	font-size: 60rpx;
 }
 /*1 */
 .icon-dianzan-s.data-v-b9cdb4f8:before {
   content: "\eb10";
-	font-size: 45rpx;
+	font-size: 60rpx;
 	color: #fee082;
 }
 .icon-release1.data-v-b9cdb4f8:before {

@@ -173,7 +173,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs/Tabs */ "components/Tabs/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../components/Tabs/Tabs.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Cates = function Cates() {__webpack_require__.e(/*! require.ensure | components/Cates/Cates */ "components/Cates/Cates").then((function () {return resolve(__webpack_require__(/*! ../../components/Cates/Cates.vue */ 91));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/Search/Search */ "components/Search/Search").then((function () {return resolve(__webpack_require__(/*! ../../components/Search/Search.vue */ 56));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Swiper = function Swiper() {__webpack_require__.e(/*! require.ensure | components/Swiper/Swiper */ "components/Swiper/Swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/Swiper/Swiper.vue */ 70));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Scroll = function Scroll() {__webpack_require__.e(/*! require.ensure | components/Scroll/Scroll */ "components/Scroll/Scroll").then((function () {return resolve(__webpack_require__(/*! ../../components/Scroll/Scroll.vue */ 77));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Movies = function Movies() {__webpack_require__.e(/*! require.ensure | components/Movies/Movies */ "components/Movies/Movies").then((function () {return resolve(__webpack_require__(/*! ../../components/Movies/Movies.vue */ 84));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Tabs = function Tabs() {__webpack_require__.e(/*! require.ensure | components/Tabs/Tabs */ "components/Tabs/Tabs").then((function () {return resolve(__webpack_require__(/*! ../../components/Tabs/Tabs.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Cates = function Cates() {__webpack_require__.e(/*! require.ensure | components/Cates/Cates */ "components/Cates/Cates").then((function () {return resolve(__webpack_require__(/*! ../../components/Cates/Cates.vue */ 91));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/Search/Search */ "components/Search/Search").then((function () {return resolve(__webpack_require__(/*! ../../components/Search/Search.vue */ 56));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Swiper = function Swiper() {__webpack_require__.e(/*! require.ensure | components/Swiper/Swiper */ "components/Swiper/Swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/Swiper/Swiper.vue */ 70));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Scroll = function Scroll() {__webpack_require__.e(/*! require.ensure | components/Scroll/Scroll */ "components/Scroll/Scroll").then((function () {return resolve(__webpack_require__(/*! ../../components/Scroll/Scroll.vue */ 77));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Movies = function Movies() {__webpack_require__.e(/*! require.ensure | components/Movies/Movies */ "components/Movies/Movies").then((function () {return resolve(__webpack_require__(/*! ../../components/Movies/Movies.vue */ 84));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var backTop = function backTop() {__webpack_require__.e(/*! require.ensure | components/common/back-top/back-top */ "components/common/back-top/back-top").then((function () {return resolve(__webpack_require__(/*! @/components/common/back-top/back-top.vue */ 98));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
 
 
 
@@ -311,7 +313,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       Tabs: ['精选', '电视剧', '综艺', '电影', '动漫'],
-      catesList: [] };
+      catesList: [],
+      backTop: {
+        scrollTop: 0 },
+
+      scrollTop: 0,
+      isbottom: false };
 
   },
   components: {
@@ -320,7 +327,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     Cates: Cates,
     Swiper: Swiper,
     Scroll: Scroll,
-    Movies: Movies
+    Movies: Movies,
+    backTop: backTop
     // Swiper2
   },
 
@@ -335,7 +343,26 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
                   }).then(function (res) {
                     _this.catesList = res;
                   }));case 2:case "end":return _context.stop();}}}, _callee);}))();
-    } } };exports.default = _default;
+    },
+
+    tapscroll: function tapscroll() {
+      uni.pageScrollTo({
+        scrollTop: 0,
+        duration: 150 });
+
+    } },
+
+  onPageScroll: function onPageScroll(e) {
+    this.backTop.scrollTop = e.scrollTop;
+  },
+
+  onReachBottom: function onReachBottom(e) {
+    this.isbottom = true;
+  },
+  onReachTop: function onReachTop(e) {
+    this.isbottom = false;
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 20 */,
