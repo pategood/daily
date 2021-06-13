@@ -15,13 +15,13 @@
 
 .icon-dianzan:before {
   content: "\e60c";
-	font-size: 45rpx;
+	font-size: 60rpx;
 }
 
 //1
 .icon-dianzan-s:before {
   content: "\eb10";
-	font-size: 45rpx;
+	font-size: 60rpx;
 	color: #fee082;
 }
 

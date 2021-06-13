@@ -155,6 +155,64 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   name: "Movies",
@@ -176,19 +234,17 @@ var _default =
         info: "2021 / 中国 /异世界 爱情",
         producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世" }],
 
-
       animationData: {} };
 
   },
   methods: {
     //实现点赞
     praiseMe: function praiseMe() {
-      console.log("1");
       //构建动画数据,并且通过step来表示这组动画的完成
+      // this.animation.translateX(500).step({duration:1000})
       this.animation.translateY(-60).opacity(1).step({
         duration: 400 });
 
-      console.log("1");
       //导出动画数据到view组件,实现组件的动画效果
       this.animationData = this.animation.export();
 
@@ -204,10 +260,11 @@ var _default =
   onLoad: function onLoad() {
     //页面加载之初,创建一个临时的动画
     this.animation = uni.createAnimation();
+
   },
   onUnload: function onUnload() {
     // 页面卸载的时候,清除动画数据
-    this.animationData = {};
+    // this.animationData = {};
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

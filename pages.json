@@ -7,8 +7,8 @@
 				"h5": {
 					"titleNView": false
 				},
-				"app-plus":{
-					
+				"app-plus": {
+
 				}
 			}
 		},
@@ -17,6 +17,22 @@
 			"style": {
 				"navigationBarTitleText": "搜索",
 				"enablePullDownRefresh": false
+				// "app-plus": { //app-plus 配置编译到 App 平台时的特定样式，部分常用配置 H5 平台也支持
+				// 	"titleNView": {
+				// 		// "type": "transparent", //透明渐变导航栏 App-nvue 2.4.4+ 支持
+				// 		"searchInput": {
+				// 			"backgroundColor": "#fff",
+				// 			"borderRadius": "6px", //输入框圆角
+				// 			"placeholder": "请输入搜索内容"
+				// 		},
+				// 		"buttons": [{ // 具体说明请继续往下看
+				// 			"text": "\ue607", // button字体图标
+				// 			"fontSrc": "/static/iconfont.ttf",
+				// 			"fontSize": "22px",
+				// 			"float": "right" // button位置, 可以选择在左边或者右边
+				// 		}]
+				// 	}
+				// }
 				// "h5": {
 				// 	"titleNView": false
 				// }
@@ -29,7 +45,8 @@
 				"enablePullDownRefresh": false
 			}
 
-		}, {
+		},
+		{
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "我的",
@@ -37,13 +54,13 @@
 			}
 		},
 		{
-			"path" : "pages/category/category",
-			"style" :                                                                                    
-			{
-					"navigationBarTitleText": "分类",
-					"enablePullDownRefresh": false
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": false
 			}
-		}],
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "znq项目",
@@ -53,29 +70,28 @@
 	"tabBar": {
 		//设置选中图标的颜色
 		// "selectedColor":"",
-		"list": [
-			{
-			"text": "首页",
-			"pagePath": "pages/index/index",
-			"iconPath": "static/img/icons/tabar/home.png",
-			"selectedIconPath": "static/img/icons/tabar/home-s.png"
-			},{
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/icons/tabar/home.png",
+				"selectedIconPath": "static/img/icons/tabar/home-s.png"
+			}, {
 				"text": "分类",
 				"pagePath": "pages/category/category",
 				"iconPath": "static/img/icons/tabar/category.png",
 				"selectedIconPath": "static/img/icons/tabar/category-s.png"
-			},{
+			}, {
 				"text": "购物车",
 				"pagePath": "pages/cart/cart",
 				"iconPath": "static/img/icons/tabar/cart.png",
 				"selectedIconPath": "static/img/icons/tabar/cart-s.png"
-			},{
+			}, {
 				"text": "个人",
 				"pagePath": "pages/my/my",
 				"iconPath": "static/img/icons/tabar/my.png",
 				"selectedIconPath": "static/img/icons/tabar/my-s.png"
 			}
-		
+
 		]
 	},
 	// "easycom": {

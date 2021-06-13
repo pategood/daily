@@ -8,35 +8,40 @@
 
 
 		<view class="movie_content">
-			<view class="movie_item">
-				<image src="../../static/img/movie/哥斯拉.jpg" mode=""></image>
+			<view class="movie_item" v-for="(item,index) in movieList" :key="index">
+				<image :src="item.img" mode=""></image>
 				<view class="movie_desc">
 					<view class="movie-title">
-						王猿大战精钢
+						{{item.title}}
 					</view>
 					<!-- <TrailerStars></TrailerStars> -->
 					<view class="movie-info">
-						2021 / 美国 /异世界 爱情
+						{{item.info}}
 					</view>
 					<view class="movie-info">
-						本·哈登 /亨利·乔布斯 / 悠米 / 嘉文四世
+						{{item.producer}}
 					</view>
 				</view>
 
-				<view class="ani" @click="praiseMe">
-					<view class="iconfont icon-dianzan" ></view>
+				<view class="ani" @click="praiseMe(index)">
+					<view  class="iconfont animated"  hover-class="tada" 
+					:class="(isRaise[index]?'icon-dianzan-s':'icon-dianzan')"></view>
 					<view class="praise-me">
 						点赞!
 					</view>
 					<!-- 点赞动画 -->
-					<view :animation="animationData" class="praise-me animation-opacity">
+					<!-- <view :animation="animationData" class="praise-me animation-opacity ">
 						+1
-					</view>
+					</view> -->
 				</view>
 
 			</view>
 		</view>
+
+
+
 	</view>
+	
 </template>
 
 <script>
@@ -44,55 +49,65 @@
 		name: "Movies",
 		data() {
 			return {
+				isRaise:[false,false,false],
+				// isRaise:false,
+				animationData: {},
 				movieList: [{
-						img: '../../static/img/movie/哥斯拉.jpg',
-						title: "王猿大战精钢",
-						info: "2021 / 美国 /异世界 爱情",
-						producer: "本·哈登 /亨利·乔布斯 / 悠米 / 嘉文四世"
-					}, {
-						img: '../../static/img/movie/哥斯拉.jpg',
-						title: "历史又TM在召唤",
-						info: "2021 / 中国 /异世界 爱情",
-						producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世"
-					}, {
-						img: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2654767767.webp',
-						title: "了不起的老爸",
-						info: "2021 / 中国 /异世界 爱情",
-						producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世"
-					}
-				],
-				animationData: {}
+					img: '../../static/img/movie/哥斯拉.jpg',
+					title: "王猿大战精钢",
+					info: "2021 / 美国 /异世界 爱情",
+					producer: "本·哈登 /亨利·乔布斯 / 悠米 / 嘉文四世"
+				}, {
+					img: '../../static/img/movie/movie4.png',
+					title: "超越",
+					info: "2021 / 中国 /异世界 爱情",
+					producer: "郑凯"
+				}, {
+					img: '../../static/img/movie/movie3.png',
+					title: "天堂电影院",
+					info: "2021 / 中国 /异世界 爱情",
+					producer: "本·哈登 /诺克萨斯 / 悠米 / 嘉文四世"
+				}]
 			};
 		},
 		methods: {
 			//实现点赞
-			praiseMe() {
-				console.log("1");
-				//构建动画数据,并且通过step来表示这组动画的完成
-				this.animation.translateY(-60).opacity(1).step({
-					duration: 400
-				})
-				console.log("1")
-				//导出动画数据到view组件,实现组件的动画效果
-				this.animationData = this.animation.export();
+			praiseMe(index) {
+				//法一:
+				// this.isRaise[index]= !this.isRaise[index];
+				// this.$forceUpdate();
+				//法二:
+				this.$set(this.isRaise, index,!this.isRaise[index])
+				// this.isRaise=!this.isRaise;
 				
+				
+				
+				//构建动画数据,并且通过step来表示这组动画的完成
+				// this.animation.translateX(500).step({duration:1000})
+				// this.animation.translateY(-60).opacity(1).step({
+				// 	duration: 400
+				// });
+				//导出动画数据到view组件,实现组件的动画效果
+				// this.animationData = this.animation.export();
+
 				// 还原动画
-				setTimeout(function(){
-					this.animation.translateY(0).opacity(0).step({
-						duration:0
-					});
-					this.animationData=this.animation.export();
-				}.bind(this),500)
+				// setTimeout(function() {
+				// 	this.animation.translateY(0).opacity(0).step({
+				// 		duration: 0
+				// 	});
+				// 	this.animationData = this.animation.export();
+				// }.bind(this), 500)
 			}
 		},
 		onLoad() {
 			//页面加载之初,创建一个临时的动画
-			this.animation = uni.createAnimation();
+			// this.animation = uni.createAnimation();
 		},
 		onUnload() {
-			// 页面卸载的时候,清除动画数据
-			this.animationData = {};
-		}
+			// this.animationData = {}
+			// 页面关闭后清空数据
+		},
+		
 	}
 </script>
 
@@ -117,13 +132,16 @@
 		// margin-left: 8rpx;
 	}
 
-	.movie_content{
+	.movie_content {
 		margin-left: 8rpx;
 		margin-right: 8rpx;
 	}
+
 	.movie_item {
 		padding: 10rpx;
 		display: flex;
+		//无效,  bug
+		​border-left:20rpx dashed #dfdedf;
 		// justify-content: space-between;
 		image {
 			width: 180upx;
@@ -152,7 +170,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		flex:1;
+		flex: 1;
 	}
 
 
@@ -164,7 +182,7 @@
 	}
 
 	.animation-opacity {
-		font-weight:bold;
-		opacity: 0;
+		font-weight: bold;
+		opacity: 1;
 	}
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 
-		<Search ></Search>
+		<Search></Search>
 		<Tabs :tabs='Tabs' />
 		<Swiper></Swiper>
 
@@ -113,11 +113,10 @@
 		<!-- 轮播图 -->
 		<!-- <swiper2></swiper2> -->
 
-
 		<!-- 休息一下 -->
 		<Movies></Movies>
-		
-		
+
+
 	</view>
 </template>
 
@@ -129,7 +128,7 @@
 	// import Swiper2 from "../../components/Swiper2/Swiper2.vue"
 	import Scroll from "../../components/Scroll/Scroll.vue"
 	import Movies from "../../components/Movies/Movies.vue"
-	
+
 
 	export default {
 		data() {
@@ -144,7 +143,7 @@
 			Cates,
 			Swiper,
 			Scroll,
-			Movies
+			Movies,
 			// Swiper2
 		},
 
@@ -177,6 +176,7 @@
 
 		navigator {
 			flex: 1;
+
 			image {
 				padding: 6rpx;
 				width: 100%;

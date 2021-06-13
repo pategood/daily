@@ -13,6 +13,7 @@
 </script>
 
 <style lang="scss">
+	@import url("styles/css/animate.min.css");
 	@import url("styles/iconfont.css");
 	// @import "cl-uni/index.scss";
 	page {
