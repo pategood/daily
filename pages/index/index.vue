@@ -2,9 +2,10 @@
 	<view class="container">
 
 		<Search></Search>
-		<Tabs :tabs='Tabs' />
-		<Swiper></Swiper>
 
+		<Tabs :tabs='Tabs' />
+
+		<Swiper></Swiper>
 
 		<!-- 		<view class="index_cate">
 			<navigator hover-stay-time="200" url="../playlist/index" v-for="item in catesList" class="cates"
@@ -43,12 +44,16 @@
 
 		<!-- 休息一下 -->
 		<Movies></Movies>
+
 		<backTop :scrollTop="backTop.scrollTop" :isbottom="isbottom"></backTop>
+
+
 
 	</view>
 </template>
 
 <script>
+	
 	import Tabs from "../../components/Tabs/Tabs.vue"
 	import Cates from "../../components/Cates/Cates.vue"
 	import Search from "../../components/Search/Search.vue"
@@ -61,6 +66,8 @@
 
 
 
+
+
 	export default {
 		data() {
 			return {
@@ -70,7 +77,7 @@
 					scrollTop: 0
 				},
 				scrollTop: 0,
-				isbottom:false
+				isbottom: false,
 			}
 		},
 		components: {
@@ -108,12 +115,12 @@
 		onPageScroll(e) {
 			this.backTop.scrollTop = e.scrollTop;
 		},
-		
+
 		onReachBottom(e) {
-			this.isbottom=true
+			this.isbottom = true
 		},
-		onReachTop(e){
-			this.isbottom=false
+		onReachTop(e) {
+			this.isbottom = false
 		}
 	}
 </script>

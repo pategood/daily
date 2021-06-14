@@ -84,7 +84,9 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "znq项目",
 		"navigationBarBackgroundColor": "#424242",
-		"backgroundColor": "#FFFFFF"
+		"backgroundColor": "#FFFFFF",
+		"usingComponents":{
+		}
 	},
 	"tabBar": {
 		//设置选中图标的颜色

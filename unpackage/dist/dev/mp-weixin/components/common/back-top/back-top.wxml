@@ -1,1 +1,0 @@
-<view data-event-opts="{{[['tap',[['toTopClick',['$event']]]]]}}" hidden="{{!(isbottom&&scrollTop>42)}}" class="{{['backTop',(isShowToTop)?'mescroll-fade-in':'']}}" bindtap="__e"><image src="../../../static/back-top/top.png" mode="widthFix"></image></view>

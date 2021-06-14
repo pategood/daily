@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "购物车",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "location": "/components/Location/location"
-  }
-}
