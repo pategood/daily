@@ -4,7 +4,7 @@
 			<view class="search_top">
 				<i class="iconfont icon-search" style="color: #333333;"></i>
 				<input id="inp" type="text" placeholder="搜索" v-model="inpValue" maxlength="12" @input="onInput"
-					@blur="offInput">
+					@blur="offInput" confirm-type="search" @confirm="doSearch">
 			</view>
 			<button v-show="isFocus" class="btn" type="default" @click="restInput">取消</button>
 			<!-- <Sbtn v-show="isFocus" class="btn" ></Sbtn> -->
@@ -28,8 +28,7 @@
 				inpValue: ''
 			};
 		},
-		components: {
-		},
+		components: {},
 		onPullDownRefresh() {
 			this.getLog();
 		},
@@ -39,12 +38,6 @@
 			this.getLog();
 		},
 		methods: {
-			// uni.showToast({
-			// 	title: "请输入正确的车牌号码",
-			// 	icon: "none",
-			// 	duration: 2000,
-			// 	mask: true
-			// });
 			getLog() {
 				uni.showLoading({
 					mask: true
@@ -76,9 +69,66 @@
 					this.isFocus = false;
 				}
 			},
-			restInput() {			
+			restInput() {
 				this.$set(this, 'inpValue', '')
 				this.isFocus = false;
+			},
+			// 搜索
+			doSearch() {
+				if (this.inpValue <= 0) {
+					uni.showToast({
+						title: "搜索框不能为空",
+						icon: "none",
+						duration: 2000,
+						mask: true
+					});
+				} else {
+
+					uni.getNetworkType({
+						success: function(res) {
+							console.log(res.networkType); //网络类型 wifi、2g、3g、4g、ethernet、unknown、none
+							if (res.networkType === "none") {
+								uni.showToast({
+									title: "当前无网络",
+									icon: "none",
+									duration: 2000,
+									mask: true
+								});
+							} else {
+								uni.showLoading({
+									mask: true,
+									title: "加载中..."
+								})
+								setTimeout(function() {
+									uni.hideNavigationBarLoading();
+									uni.hideLoading()
+								}, 500)
+
+
+								// var serverUrl="https://ke.qq.com/course/379043";
+								// uni.request({
+								// 	url: serverUrl + '/search/list?keywords=' + keywords,
+								// 	method: "POST",
+								// 	success: (res) => {
+								// 		if (res.data.status == 200) {
+								// 			var tempList = res.data.data.rows;
+								//      console.log("搜索成功")
+								// 		}
+								// 	},
+								// 	fail: (res) => {
+								//    console.log("搜索失败")
+								// 		uni.hideNavigationBarLoading();
+								// 		uni.hideLoading()
+								// 	},
+								// 	complete: () => {
+								// 		uni.hideNavigationBarLoading();
+								// 		uni.hideLoading()
+								// 	}
+								// })
+							}
+						}
+					});
+				}
 			},
 		}
 	}

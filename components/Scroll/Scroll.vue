@@ -50,6 +50,9 @@
 
 				]
 			};
+		},
+		methods:{
+			
 		}
 	}
 </script>

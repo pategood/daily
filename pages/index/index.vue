@@ -13,50 +13,7 @@
 			</navigator>
 		</view> -->
 
-
-
-		<view class="menu_content">
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/menu.png" mode="widthFix"></image>
-				<p>找人</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/xuexi.png" mode="widthFix"></image>
-				<p>学习</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/menu.png" mode="widthFix"></image>
-				<p>找人</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/game.png" mode="widthFix"></image>
-				<p>游戏</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/video.png" mode="widthFix"></image>
-				<p>视频</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/hot.png" mode="widthFix"></image>
-				<p>热门</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/eley.png" mode="widthFix"></image>
-				<p>电影</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/live.png" mode="widthFix"></image>
-				<p>直播</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/menu.png" mode="widthFix"></image>
-				<p>找人</p>
-			</navigator>
-			<navigator class="menu_item" hover-stay-time="200" url="../playlist/index">
-				<image src="../../static/img/icons/more.png" mode="widthFix"></image>
-				<p>更多</p>
-			</navigator>
-		</view>
+		<Menu></Menu>
 
 		<!-- 热门 -->
 		<view class="hot_content">
@@ -82,42 +39,11 @@
 
 
 		<!-- 学习之夜 栏目 -->
-		<!-- <view class="theme_box">
-			<view class="theme_title">
-				<p class="titleMain">学习狂欢</p>
-				<p class="title">学习打卡 call</p>
-			</view>
-
-			滚动组
-			<view class="thteme_content">
-				<view class="groupItem">
-					<image src="../../static/img/video/gaoxiao.png" mode="aspectFill	"></image>
-					<p>如何高效学习?教你7招提高记忆力</p>
-				</view>
-				<view class="groupItem">
-					<image src="../../static/img/video/video1.png" mode="aspectFill	"></image>
-					<p>北大心理学硕士来教你</p>
-				</view>
-				<view class="groupItem">
-					<image src="../../static/img/group/rmd.png" mode="aspectFill	"></image>
-					<p>一起狂欢</p>
-				</view>
-				<view class="groupItem">
-					<image src="../../static/img/group/rmd.png" mode="aspectFill	"></image>
-					<p>一起狂欢</p>
-				</view>
-			</view>
-		</view> -->
 		<Scroll></Scroll>
-
-		<!-- 轮播图 -->
-		<!-- <swiper2></swiper2> -->
 
 		<!-- 休息一下 -->
 		<Movies></Movies>
 		<backTop :scrollTop="backTop.scrollTop" :isbottom="isbottom"></backTop>
-
-		<!-- <button type="primary" @click="tapscroll">回到顶部</button> -->
 
 	</view>
 </template>
@@ -130,6 +56,7 @@
 	// import Swiper2 from "../../components/Swiper2/Swiper2.vue"
 	import Scroll from "../../components/Scroll/Scroll.vue"
 	import Movies from "../../components/Movies/Movies.vue"
+	import Menu from "../../components/Menu/Menu.vue"
 	import backTop from '@/components/common/back-top/back-top.vue';
 
 
@@ -153,6 +80,7 @@
 			Swiper,
 			Scroll,
 			Movies,
+			Menu,
 			backTop
 			// Swiper2
 		},
@@ -215,24 +143,6 @@
 		}
 	}
 
-	//menu
-	.menu_content {
-		padding: 10rpx;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
-		.menu_item {
-			width: 18%;
-			display: flex;
-			flex: 1;
-			// flex-direction: column;
-			flex-wrap: wrap;
-			align-items: center;
-			padding: 20rpx;
-			justify-content: center;
-		}
-	}
 
 	//hot
 	.hot_box {

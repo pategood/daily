@@ -61,7 +61,25 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/details/details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "视频详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/studyList/studyList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "学习分页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "znq项目",
