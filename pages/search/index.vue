@@ -3,10 +3,12 @@
 		<view class="search_index">
 			<view class="search_top">
 				<i class="iconfont icon-search" style="color: #333333;"></i>
-				<input id="inp" type="text" placeholder="搜索" :value="inpValue.value" maxlength="12" @input="onInput"
+				<input id="inp" type="text" placeholder="搜索" v-model="inpValue" maxlength="12" @input="onInput"
 					@blur="offInput">
 			</view>
-			<button v-show="isFocus" class="btn" type="default" @click="handleCancel">取消</button>
+			<button v-show="isFocus" class="btn" type="default" @click="restInput">取消</button>
+			<!-- <Sbtn v-show="isFocus" class="btn" ></Sbtn> -->
+			<!-- <Sinput :placeholder="搜索" ></Sinput> -->
 		</view>
 		<view class="search_title">大家都在搜</view>
 		<view class="search_keywords">
@@ -23,8 +25,10 @@
 				searchValue: [],
 				isFocus: false,
 				//
-				inpValue: {value:""}
+				inpValue: ''
 			};
+		},
+		components: {
 		},
 		onPullDownRefresh() {
 			this.getLog();
@@ -35,6 +39,12 @@
 			this.getLog();
 		},
 		methods: {
+			// uni.showToast({
+			// 	title: "请输入正确的车牌号码",
+			// 	icon: "none",
+			// 	duration: 2000,
+			// 	mask: true
+			// });
 			getLog() {
 				uni.showLoading({
 					mask: true
@@ -58,8 +68,7 @@
 			},
 			onInput(e) {
 				this.isFocus = true;
-				console.log(e.target.value);
-				// this.inpValue = e.target.value;
+				this.inpValue = e.target.value;
 			},
 
 			offInput(e) {
@@ -67,21 +76,10 @@
 					this.isFocus = false;
 				}
 			},
-			handleCancel() {
-				// this.$set()
-				// this.$set(this, inpValue, '')
-				console.log(this.inpValue)
-				this.$nextTick(()=>{
-				    this.inpValue = "";
-				})
-				console.log(this.inpValue)
-				// uni.showToast({
-				// 	title: "请输入正确的车牌号码",
-				// 	icon: "none",
-				// 	duration: 2000,
-				// 	mask: true
-				// });
-			}
+			restInput() {			
+				this.$set(this, 'inpValue', '')
+				this.isFocus = false;
+			},
 		}
 	}
 </script>
@@ -135,7 +133,6 @@
 			justify-content: center;
 			align-items: center;
 			font-size: 26rpx;
-
 		}
 
 
