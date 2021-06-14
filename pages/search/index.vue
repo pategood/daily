@@ -32,7 +32,7 @@
 		onPullDownRefresh() {
 			this.getLog();
 		},
-		created() {
+		onLoad() {
 			// let _this = this;
 			// 调用云函数
 			this.getLog();

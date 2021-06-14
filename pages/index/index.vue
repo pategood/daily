@@ -1,6 +1,7 @@
 <template>
 	<view class="container">
 
+
 		<Search></Search>
 
 		<Tabs :tabs='Tabs' />
@@ -53,7 +54,6 @@
 </template>
 
 <script>
-	
 	import Tabs from "../../components/Tabs/Tabs.vue"
 	import Cates from "../../components/Cates/Cates.vue"
 	import Search from "../../components/Search/Search.vue"
@@ -63,9 +63,6 @@
 	import Movies from "../../components/Movies/Movies.vue"
 	import Menu from "../../components/Menu/Menu.vue"
 	import backTop from '@/components/common/back-top/back-top.vue';
-
-
-
 
 
 	export default {
@@ -88,7 +85,7 @@
 			Scroll,
 			Movies,
 			Menu,
-			backTop
+			backTop,
 			// Swiper2
 		},
 
