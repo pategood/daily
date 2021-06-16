@@ -57,7 +57,7 @@
 				animationData: {},
 				animationDataArr:[{},{},{},{},{},{}],
 				movieList: [{
-					img: '../../static/img/movie/哥斯拉.jpg',
+					img: '../../static/img/movie/guaishou.jpg',
 					title: "王猿大战精钢",
 					info: "2021 / 美国 /异世界 爱情",
 					producer: "本·哈登 /亨利·乔布斯 / 悠米 / 嘉文四世"

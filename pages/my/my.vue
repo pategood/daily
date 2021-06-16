@@ -1,6 +1,7 @@
 <template>
-	<view>
-		个人
+	<view class="my_content">
+		个人页
+
 	</view>
 </template>
 
@@ -10,11 +11,15 @@
 		data() {
 			return {
 				
-			};
+			}
+		},
+		methods:{
+			
 		}
 	}
 </script>
 
 <style lang="scss">
-
+	
 </style>
+
