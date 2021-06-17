@@ -54,14 +54,14 @@
 </template>
 
 <script>
-	import Tabs from "../../components/Tabs/Tabs.vue"
-	import Cates from "../../components/Cates/Cates.vue"
-	import Search from "../../components/Search/Search.vue"
-	import Swiper from "../../components/Swiper/Swiper.vue"
+	import Tabs from "../../components/Home/Tabs/Tabs.vue"
+	import Cates from "../../components/Home/Cates/Cates.vue"
+	import Search from "../../components/Home/Search/Search.vue"
+	import Swiper from "../../components/Home/Swiper/Swiper.vue"
 	// import Swiper2 from "../../components/Swiper2/Swiper2.vue"
-	import Scroll from "../../components/Scroll/Scroll.vue"
-	import Movies from "../../components/Movies/Movies.vue"
-	import Menu from "../../components/Menu/Menu.vue"
+	import Scroll from "../../components/Home/Scroll/Scroll.vue"
+	import Movies from "../../components/Home/Movies/Movies.vue"
+	import Menu from "../../components/Home/Menu/Menu.vue"
 	import backTop from '@/components/common/back-top/back-top.vue';
 
 
@@ -159,6 +159,7 @@
 	}
 
 	.hot_item {
+		box-sizing: border-box;
 		padding: 15rpx;
 		display: flex;
 		flex-direction: row;

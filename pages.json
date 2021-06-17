@@ -79,6 +79,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/my/children/Login/Login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
