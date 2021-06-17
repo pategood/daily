@@ -2,7 +2,7 @@
 	<view>
 		<view class="content">
 			<view class="left">
-				<image class="img" src="../../../static/img/my/tou.png" mode="widthFix"></image>
+				<image class="img" src="/static/img/my/tou.png" mode="widthFix"></image>
 				<text>点击登录</text>
 			</view>
 			<view class="span_right"></view>
