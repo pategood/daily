@@ -1,6 +1,6 @@
 <template>
 	<view class="my_content">
-		<UserInfo></UserInfo>
+		<Login></Login>
 		<!-- <section class="account">
 			<div class="account-item">
 				<div class="number">
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-	import UserInfo from "@/components/My/UserInfo/UserInfo.vue"
+	import Login from '@/components/My/Login/Login.vue'
 	export default {
 		name: "my",
 		data() {
@@ -37,7 +37,7 @@
 
 		},
 		components:{
-			UserInfo
+			Login
 		}
 	}
 </script>
