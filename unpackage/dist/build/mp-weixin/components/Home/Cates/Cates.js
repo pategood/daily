@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/Home/Cates/Cates"],{"0566":function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=u(e("a34a"));function u(t){return t&&t.__esModule?t:{default:t}}function a(t,n,e,r,u,a,o){try{var c=t[a](o),i=c.value}catch(s){return void e(s)}c.done?n(i):Promise.resolve(i).then(r,u)}function o(t){return function(){var n=this,e=arguments;return new Promise((function(r,u){var o=t.apply(n,e);function c(t){a(o,r,u,c,i,"next",t)}function i(t){a(o,r,u,c,i,"throw",t)}c(void 0)}))}}var c={name:"Cates",data:function(){return{catesList:[]}},onLoad:function(){this.getCateList()},methods:{getCateList:function(){var t=this;return o(r.default.mark((function n(){return r.default.wrap((function(n){while(1)switch(n.prev=n.next){case 0:return n.next=2,t.$request({url:"/home/catitems"}).then((function(n){t.catesList=n,console.log(t.catesList)}));case 2:case"end":return n.stop()}}),n)})))()}}};n.default=c},"1a60":function(t,n,e){"use strict";var r=e("53f1"),u=e.n(r);u.a},"46ae":function(t,n,e){"use strict";var r;e.d(n,"b",(function(){return u})),e.d(n,"c",(function(){return a})),e.d(n,"a",(function(){return r}));var u=function(){var t=this,n=t.$createElement;t._self._c},a=[]},"53f1":function(t,n,e){},"842d":function(t,n,e){"use strict";e.r(n);var r=e("46ae"),u=e("d2ed");for(var a in u)"default"!==a&&function(t){e.d(n,t,(function(){return u[t]}))}(a);e("1a60");var o,c=e("f0c5"),i=Object(c["a"])(u["default"],r["b"],r["c"],!1,null,"ed9bd0d4",null,!1,r["a"],o);n["default"]=i.exports},d2ed:function(t,n,e){"use strict";e.r(n);var r=e("0566"),u=e.n(r);for(var a in r)"default"!==a&&function(t){e.d(n,t,(function(){return r[t]}))}(a);n["default"]=u.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/Home/Cates/Cates-create-component',
+    {
+        'components/Home/Cates/Cates-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("842d"))
+        })
+    },
+    [['components/Home/Cates/Cates-create-component']]
+]);

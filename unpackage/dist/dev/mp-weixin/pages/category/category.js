@@ -180,8 +180,10 @@ var _default =
       navIndex: 0 };
 
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad(params) {
     this.getCates();
+    // 在这里获取分类页传过来u的数据id
+    this.firstItemTap(params);
   },
   methods: {
     getCates: function getCates() {var _this = this;
@@ -206,9 +208,9 @@ var _default =
 
     },
     toDeatil: function toDeatil(e) {
-      var mId = e.currentTarget.dataset.trailerid;
-      uni.navigator({
-        url: "" + mId });
+      var Id = e.currentTarget.dataset.id;
+      uni.navigateTo({
+        url: "/pages/details/details?Id=" + Id });
 
     },
     handleItemTap: function handleItemTap(e) {
@@ -216,6 +218,23 @@ var _default =
       var index = event.currentTarget.dataset.index;
       this.toView = id;
       this.navIndex = index;
+      // console.log(this.toView)
+    },
+    firstItemTap: function firstItemTap(params) {
+      var routes = getCurrentPages(); // 获取当前打开过的页面路由数组
+      // let curRoute = routes[routes.length - 1].route //获取当前页面路由
+      var curParam = routes[routes.length - 1].options; //获取路由参数
+      // console.log(curParam)
+      this.navIndex = params.id || 0;
+
+      this.$nextTick(function () {
+        this.toView = params.cid || "one";
+      });
+      // console.log(params.cid)
+      // console.log(this.toView)
+      // this.$set(this, 'toView', params.cid)
+      // this.toView = params.cid;
+      // this.$forceUpdate();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 31)["default"]))
 

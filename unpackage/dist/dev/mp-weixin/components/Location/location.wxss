@@ -26,9 +26,9 @@
 /* 文章场景相关 */
 @font-face {
   font-family: "iconfont"; /* Project id 2578268 */
-  src: url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.woff2?t=1623412220396') format('woff2'),
-       url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.woff?t=1623412220396') format('woff'),
-       url('//at.alicdn.com/t/font_2578268_7clei9nbdy5.ttf?t=1623412220396') format('truetype');
+  src: url('//at.alicdn.com/t/font_2578268_b16o7gln13l.woff2?t=1624170836774') format('woff2'),
+       url('//at.alicdn.com/t/font_2578268_b16o7gln13l.woff?t=1624170836774') format('woff'),
+       url('//at.alicdn.com/t/font_2578268_b16o7gln13l.ttf?t=1624170836774') format('truetype');
 }
 .iconfont.data-v-b9cdb4f8 {
   font-family: "iconfont" !important;
@@ -37,27 +37,48 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-huancun.data-v-b9cdb4f8:before {
+  content: "\e6ba";
+	color: #669cfe;
+	/* font-size: 80rpx; */
+}
+.icon-history.data-v-b9cdb4f8:before {
+  content: "\e617";
+	color: #669cfe;
+	/* font-size: 80rpx; */
+}
+.icon-wodeshoucang.data-v-b9cdb4f8:before {
+  content: "\e69e";
+	color: #669cfe;
+}
+.icon-meishi1.data-v-b9cdb4f8:before {
+  content: "\ec5c";
+}
+.icon-liebiaodaohang_dongman.data-v-b9cdb4f8:before {
+  content: "\e638";
+}
+.icon-meishi.data-v-b9cdb4f8:before {
+  content: "\e604";
+}
 .icon-dianzan.data-v-b9cdb4f8:before {
   content: "\e60c";
-	font-size: 60rpx;
+  font-size: 60rpx;
 }
-/*1 */
 .icon-dianzan-s.data-v-b9cdb4f8:before {
   content: "\eb10";
-	font-size: 60rpx;
+  font-size: 60rpx;
 	color: #fee082;
 }
 .icon-release1.data-v-b9cdb4f8:before {
   content: "\e618";
 }
-/*1 */
 .icon-release.data-v-b9cdb4f8:before {
   content: "\e614";
-	color:#1296db;
+  color:#1296db;
 }
 .icon-wodedizhi.data-v-b9cdb4f8:before {
   content: "\e613";
-	color: #669cfe;
+  color: #669cfe;
 }
 .icon-erweima.data-v-b9cdb4f8:before {
   content: "\e63c";
@@ -87,6 +108,7 @@
   content: "\eb0d";
 }
 .search-view.data-v-b9cdb4f8 {
+  margin: 20rpx 0;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;

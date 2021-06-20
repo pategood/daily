@@ -31,9 +31,9 @@
 		margin: 0;
 	}
 
-	* {
-		box-sizing: border-box;
-	}
+	// * {
+	// 	box-sizing: border-box;
+	// }
 
 	//去除滚动条效果
 	::-webkit-scrollbar {

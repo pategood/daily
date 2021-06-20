@@ -87,6 +87,8 @@
           flex-direction: column;
 }
 .right_title {
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
   font-size: 40rpx;
   width: 100%;
   display: -webkit-box;
@@ -133,6 +135,7 @@
   height: 120rpx;
   -webkit-flex-shrink: 0;
           flex-shrink: 0;
+  border-radius: 20rpx;
 }
 .cate_item .right_name {
   width: 120rpx;

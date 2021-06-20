@@ -5,7 +5,6 @@
 			<image src="../../static/img/icons/tabar/location.png"></image>
 		</view> -->
 		<p class="search-p"> 广东省深圳市龙华区大浪街道</p>
-		<text >3</text>
 	</view>
 </template>
 
@@ -24,6 +23,7 @@
 	@import url("../../styles/iconfont.css");
 
 	.search-view {
+		margin:20rpx 0;
 		width: 100%;
 		display: flex;
 		padding: 0 10rpx;

@@ -5,10 +5,12 @@ import store from './store'
 // import ClUni from "cl-uni";
 import { request } from './util/request.js'
 
+import share from './mixins/share.js'
+
 Vue.prototype.$store=store
 Vue.prototype.$request = request
 
-
+Vue.mixin(share)
 
 
 Vue.config.productionTip = false

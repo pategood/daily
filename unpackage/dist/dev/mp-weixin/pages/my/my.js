@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var UserInfo = function UserInfo() {__webpack_require__.e(/*! require.ensure | components/My/UserInfo/UserInfo */ "components/My/UserInfo/UserInfo").then((function () {return resolve(__webpack_require__(/*! @/components/My/UserInfo/UserInfo.vue */ 139));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Login = function Login() {__webpack_require__.e(/*! require.ensure | components/My/Login/Login */ "components/My/Login/Login").then((function () {return resolve(__webpack_require__(/*! @/components/My/Login/Login.vue */ 133));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -167,7 +167,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   components: {
-    UserInfo: UserInfo } };exports.default = _default;
+    Login: Login } };exports.default = _default;
 
 /***/ })
 

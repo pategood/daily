@@ -118,7 +118,7 @@
 		},
 		onReachTop(e) {
 			this.isbottom = false
-		}
+		},
 	}
 </script>
 

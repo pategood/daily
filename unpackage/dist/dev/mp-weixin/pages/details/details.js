@@ -134,6 +134,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -144,7 +155,15 @@ var _default =
   onLoad: function onLoad(params) {
 
     // 在这里获取分类页传过来u的数据id
-    console.log(params.trail);
+    // console.log(params)
+  },
+  //小程序分享
+  onShareAppMessage: function onShareAppMessage(res) {
+    return {
+      title: '分享(非朋友圈)',
+      path: '/pages/index/index' };
+
+
   } };exports.default = _default;
 
 /***/ })

@@ -20,7 +20,7 @@
 				</view>
 
 				<view class="right_c">
-					<navigator class="cate_item" v-for="(item2,index2) in (item1.children)" :key="index2" hover-stay-time="200">
+					<navigator class="cate_item" v-for="(item2,index2) in (item1.children)" :key="index2" hover-stay-time="200" @click="toDeatil" :data-id="item2.cat_id">
 						<image :src="item2.img" mode="" class="right_img"></image>
 						<view class="right_name">
 							{{item2.cate_name}}
@@ -48,8 +48,10 @@
 				navIndex: 0
 			}
 		},
-		onLoad() {
+		onLoad(params) {
 			this.getCates();
+			// 在这里获取分类页传过来u的数据id
+			this.firstItemTap(params)
 		},
 		methods: {
 			getCates() {
@@ -74,9 +76,9 @@
 				});
 			},
 			toDeatil(e) {
-				var mId = e.currentTarget.dataset.trailerid
-				uni.navigator({
-					url: "" + mId
+				var Id = e.currentTarget.dataset.id
+				uni.navigateTo({
+					url: "/pages/details/details?Id=" + Id
 				})
 			},
 			handleItemTap(e) {
@@ -84,8 +86,27 @@
 				var index =event.currentTarget.dataset.index;
 				this.toView = id;
 				this.navIndex=index;
+				// console.log(this.toView)
+			},
+			firstItemTap(params){
+				let routes = getCurrentPages(); // 获取当前打开过的页面路由数组
+				// let curRoute = routes[routes.length - 1].route //获取当前页面路由
+				let curParam = routes[routes.length - 1].options; //获取路由参数
+				// console.log(curParam)
+				this.navIndex=params.id  || 0;
+				
+				this.$nextTick(function() {
+					this.toView=params.cid ||  "one";
+				});
+				// console.log(params.cid)
+				// console.log(this.toView)
+				// this.$set(this, 'toView', params.cid)
+				// this.toView = params.cid;
+				// this.$forceUpdate();
 			}
-		},
+		}
+		
+
 	}
 </script>
 
@@ -129,6 +150,8 @@
 	}
 
 	.right_title {
+		margin-top: 15rpx;
+		margin-bottom: 15rpx;
 		font-size: 40rpx;
 		width: 100%;
 		display: flex;
@@ -162,6 +185,7 @@
 			width: 120upx;
 			height: 120upx;
 			flex-shrink: 0;
+			border-radius: 20rpx;
 		}
 
 		.right_name {

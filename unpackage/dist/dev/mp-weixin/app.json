@@ -6,8 +6,7 @@
     "pages/my/my",
     "pages/category/category",
     "pages/details/details",
-    "pages/studyList/studyList",
-    "pages/my/children/Login/Login"
+    "pages/studyList/studyList"
   ],
   "subPackages": [],
   "window": {
