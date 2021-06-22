@@ -178,7 +178,6 @@
 			flex: 1;
 			margin-left: 10rpx;
 			border-right: 2rpx solid #dddddd;
-			;
 		}
 	}
 

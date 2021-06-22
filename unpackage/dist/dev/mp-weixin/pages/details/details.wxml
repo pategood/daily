@@ -1,1 +1,1 @@
-<view><text>分享页</text><view class="player"><video class="movie" src controls="{{true}}"></video></view><view class="movie-info"></view></view>
+<view><text>视频详情页</text><view class="player"><video class="movie" src controls="{{true}}" id="myMovie"></video></view><view class="movie-info"><navigator url><image src="https://i.loli.net/2021/06/22/h3uCNyP2f8EH7Fk.jpg" mode></image></navigator></view></view>

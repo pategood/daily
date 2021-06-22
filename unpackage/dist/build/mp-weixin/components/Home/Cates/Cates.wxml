@@ -1,1 +1,0 @@
-<view class="data-v-ed9bd0d4"><view class="index_cate data-v-ed9bd0d4"><block wx:for="{{catesList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="name"><navigator class="cates data-v-ed9bd0d4" url="../pages/playlist/index"></navigator></block></view></view>

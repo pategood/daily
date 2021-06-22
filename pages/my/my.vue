@@ -21,6 +21,10 @@
 				<div class="account-info">我的积分</div>
 			</div>
 		</section> -->
+	
+	
+		
+	
 	</view>
 </template>
 
@@ -43,5 +47,7 @@
 </script>
 
 <style lang="scss">
-
+	.my_content{
+		// background-color: #fffbe5;
+	}
 </style>

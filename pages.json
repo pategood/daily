@@ -9,7 +9,7 @@
 					"titleNView": false
 				},
 				"app-plus": {
-
+					"titleNView": false
 				}
 			}
 		},
@@ -52,6 +52,10 @@
 			"style": {
 				"navigationBarTitleText": "我的",
 				"enablePullDownRefresh": false
+				// "navigationBarBackgroundColor":"#fdf7e5",
+				// "app-plus": {
+				// 		"titleNView":false
+				// }
 			}
 		},
 		{
@@ -64,12 +68,42 @@
 			"path": "pages/details/details",
 			"style": {
 				"navigationBarTitleText": "视频详情",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+								"type": "share"
+							}
+							// ,{
+							// 	"type":"home"
+							// }
+							// ,{
+							// 	"type":"forward"
+							// }
+						]
+					}
+				}
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/studyList/studyList",
 			"style": {
 				"navigationBarTitleText": "学习分页",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		{
+			"path": "pages/my/children/registLogin/registLogin",
+			"style": {
+				"navigationBarTitleText": "注册登录",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		{
+			"path": "pages/my/children/registLogin/registLogin",
+			"style": {
+				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 

@@ -5,6 +5,7 @@
 			<image src="../../static/img/icons/tabar/location.png"></image>
 		</view> -->
 		<p class="search-p"> 广东省深圳市龙华区大浪街道</p>
+		<button type="default" @click="getLocation">获取定位</button>
 	</view>
 </template>
 
@@ -15,6 +16,21 @@
 			return {
 
 			};
+		},
+		methods: {
+			getLocation() {
+				uni.getLocation({
+					type: 'wgs84',
+					success: function(res) {
+						console.log('当前位置的经度：' + res.longitude);
+						console.log('当前位置的纬度：' + res.latitude);
+					},
+					fail() {
+						console.log("获取定位失败")
+					}
+				});
+
+			}
 		}
 	}
 </script>
@@ -23,7 +39,7 @@
 	@import url("../../styles/iconfont.css");
 
 	.search-view {
-		margin:20rpx 0;
+		margin: 20rpx 0;
 		width: 100%;
 		display: flex;
 		padding: 0 10rpx;

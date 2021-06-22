@@ -1,0 +1,46 @@
+.body{
+	border-top: solid 1px #DBDBDA;
+	padding: 0 40upx;
+}
+
+
+
+/* 头像 */
+
+.face-wapper{
+	display: flex;
+	flex-direction:row ;
+	justify-content: center;
+	margin-top: 120upx;
+	margin-bottom: 120upx;
+}
+
+
+.face{
+	width: 160upx;
+	height: 160upx;
+}
+
+
+.info-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	border-bottom: solid 1px #DBDBDA;
+	padding-bottom: 20upx;
+}
+
+.world-lbl{
+	color: #808080;
+}
+
+.input {
+	width: 500upx;
+	margin-left: 40upx;
+}
+
+
+.graywords{
+	color: #EAEAEA;
+}

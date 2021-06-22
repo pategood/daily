@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "user-info": "/components/My/UserInfo/UserInfo"
-  }
-}

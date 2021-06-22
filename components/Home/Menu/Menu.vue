@@ -100,5 +100,8 @@
 			padding: 20upx;
 			justify-content: center;
 		}
+		.menu_item:hover{
+			color: blue;
+		}
 	}
 </style>
