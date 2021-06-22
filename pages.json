@@ -57,45 +57,30 @@
 		{
 			"path": "pages/category/category",
 			"style": {
-				"navigationBarTitleText": "分类",
+				"navigationBarTitleText": "频道",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/details/details",
+			"style": {
+				"navigationBarTitleText": "视频详情",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/studyList/studyList",
+			"style": {
+				"navigationBarTitleText": "学习分页",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/details/details",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "视频详情",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/studyList/studyList",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "学习分页",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/children/Login/Login",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "znq项目",
 		"navigationBarBackgroundColor": "#424242",
 		"backgroundColor": "#FFFFFF",
-		"usingComponents":{
-		}
+		"usingComponents": {}
 	},
 	"tabBar": {
 		//设置选中图标的颜色

@@ -1,18 +1,15 @@
 <template>
 	<view class="tabs">
-		<view class="tabs_title" :class="currentIndex== index?'active':''" v-for="(item,index) in tabs" :key="index"
-			@click="changeTab(index) ">
-			<!-- <view class="b"> -->
-				<view class='tab_item'>{{item}}</view>
-				<view class="tab_line"></view>
-				
-			<!-- </view> -->
-		</view>
-		<view class="tabs_content">
-			<!-- <image src="../static/img`/1.jpg" mode="widthFix"></image> -->
+		<!-- <scroll-view scroll-y="true" class="tabs"> -->
 
-		</view>
+			<view class="tabs_title"  v-for="(item,index) in tabs" :key="index"
+				@click="changeTab(index) ">
+				<span class='tab_item' :class="{ active: index == currentIndex }">{{item}}</span>
+			</view>
+			
+			<!-- <view class="tabs_content"></view> -->
 
+		<!-- </scroll-view> -->
 	</view>
 </template>
 
@@ -46,30 +43,40 @@
 
 <style lang="scss">
 	.tabs {
-		
-		color: #fd7103;
-		height: 100%;
-		line-height: 100%;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0 10rpx 0 10rpx;
+		height: 80rpx;
+		line-height: 80rpx;
+		background-color: #fff;
+		z-index: 2;
+		border-bottom: 2rpx solid #dddddd;
+		color: #fd7103;
 		border-radius: 200rpx;
 		// background-color: red;
 	}
 
 	.tabs_title {
 		width: 60%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #e8e8e8;
-		
+		flex: 1;
+		text-align: center;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		// background-color: #f4f4f4;
+	}
+	
+	
+	.active {
+		font-size: 35rpx;
+		color:#fa7298;
+		font-weight:bolder ;
+		margin: 0 5px 0 5px;
+		border-radius: 3%;
+		border-bottom: 2px salmon solid;
 	}
 
 	.tab_item {
-		width: fit-content;
-		margin: 15rpx auto 21rpx;
+		// width: fit-content;
+		// margin: 15rpx auto 21rpx;
 		cursor: pointer;
 		// position: relative;
 	}
@@ -77,11 +84,11 @@
 
 
 
-	.tab_line {
-		position: relative;
+	// .tab_line {
+		// position: relative;
 		// height: 8rpx;
 		// width: 90%;
-	}
+	// }
 
 	.tab_line:after {
 		content: '';
@@ -95,7 +102,6 @@
 		border-bottom: 8rpx solid currentColor;
 		box-sizing: border-box;
 	}
-
 
 
 

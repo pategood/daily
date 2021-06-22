@@ -2,6 +2,6 @@
   "navigationBarTitleText": "我的",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "user-info": "/components/My/UserInfo/UserInfo"
+    "login": "/components/My/Login/Login"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "user-info": "/components/My/UserInfo/UserInfo"
+  }
+}

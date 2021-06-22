@@ -68,7 +68,8 @@
 	export default {
 		data() {
 			return {
-				Tabs: ['精选', '电视剧', '综艺', '电影', '动漫'],
+				Tabs: ['精选', '电视剧', '美食', '电影', '动漫','综艺'],
+				// Tabs: ['精选', '电视剧', '美食', '电影', '动漫','综艺','直播'],
 				catesList: [],
 				backTop: {
 					scrollTop: 0
@@ -118,7 +119,7 @@
 		},
 		onReachTop(e) {
 			this.isbottom = false
-		}
+		},
 	}
 </script>
 

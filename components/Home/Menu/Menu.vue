@@ -2,7 +2,7 @@
 	<view>
 		<view class="menu_content">
 			<navigator url="../playlist/index" class="menu_item" hover-stay-time="200"
-				v-for="item in menuList" :key="item.id"
+				v-for="(item,index) in menuList" :key="item.id"     @click="toCategory" :data-id="item.id" :data-c_id="item.c_id"
 			>
 				<image :src="item.img" mode="widthFix"></image>
 				<p>{{item.title}}</p>
@@ -17,47 +17,66 @@
 		data() {
 			return {
 				menuList: [{
-					id: 1,
-					title: "找人",
+					c_id:"one",
+					id: 0,
+					title: "通讯",
 					img: "/static/img/icons/menu.png",
 				}, {
-					id: 2,
+					c_id:"two",
+					id: 1,
 					title: "学习",
 					img: "/static/img/icons/xuexi.png"
 				}, {
-					id: 3,
-					title: "找人",
-					img: "/static/img/icons/menu.png",
+					c_id:"three",
+					id: 2,
+					title: "美食",
+					img: "/static/img/icons/food.png",
 				}, {
-					id: 4,
+					c_id:"four",
+					id: 3,
 					title: "游戏",
 					img: "/static/img/icons/game.png"
 				}, {
-					id: 5,
+					c_id:"five",
+					id: 4,
 					title: "视频",
 					img: "/static/img/icons/video.png"
 				}, {
-					id: 6,
+					c_id:"six",
+					id: 5,
 					title: "热门",
 					img: "/static/img/icons/hot.png"
 				}, {
-					id: 7,
+					c_id:"seven",
+					id: 6,
 					title: "电影",
 					img: "/static/img/icons/eley.png"
 				}, {
-					id: 8,
+					c_id:"eight",
+					id: 7,
 					title: "直播",
 					img: "/static/img/icons/live.png"
 				}, {
-					id: 9,
-					title: "找人",
+					c_id:"nine",
+					id: 8,
+					title: "动漫",
 					img: "/static/img/icons/menu.png",
 				}, {
-					id: 10,
+					c_id:"one",
+					id: 9,
 					title: "更多",
 					img: "/static/img/icons/more.png"
 				}]
-			};
+			}
+		},
+		methods:{
+			toCategory(e){
+				var id =e.currentTarget.dataset.id;
+				var cid =e.currentTarget.dataset.c_id;
+				uni.reLaunch({
+					url: "/pages/category/category?id=" + id +"&cid=" +cid
+				})
+			}
 		}
 	}
 </script>

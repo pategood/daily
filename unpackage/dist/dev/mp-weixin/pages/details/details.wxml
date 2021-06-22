@@ -1,1 +1,1 @@
-<view></view>
+<view><text>分享页</text><view class="player"><video class="movie" src controls="{{true}}"></video></view><view class="movie-info"></view></view>

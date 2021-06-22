@@ -5,7 +5,11 @@
 				<image class="img" src="/static/img/my/tou.png" mode="widthFix"></image>
 				<text>点击登录</text>
 			</view>
-			<view class="span_right"></view>
+			
+			<view class="right">
+				<span>空间</span>
+				<view class="span_right"></view>
+			</view>
 		</view>
 
 	</view>
@@ -31,7 +35,7 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: nowrap;
-		padding: 20upx;
+		padding: 20px;
 	}
 
 
@@ -44,9 +48,15 @@
 
 		.img {
 			border-radius: 100%;
-			width: 200upx;
-			height: 200upx;
+			width: 150upx;
+			height: 150upx;
 		}
+	}
+	.right{
+		width: 120rpx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 
@@ -59,11 +69,11 @@
 
 
 	.span_right {
-		font-size: 0.8em;
+		font-size: 0.8px;
 		/*大小*/
 		padding: 0.4em;
-		width: 30upx;
-		height: 30upx;
+		width: 10px;
+		height: 10px;
 		border-top: 3px solid #b9b9b9;
 		/*上面的线条*/
 		border-right: 3px solid #b9b9b9;

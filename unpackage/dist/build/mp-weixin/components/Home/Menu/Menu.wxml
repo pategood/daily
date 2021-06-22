@@ -1,0 +1,1 @@
+<view><view class="menu_content"><block wx:for="{{menuList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><navigator class="menu_item" url="../playlist/index" hover-stay-time="200"><image src="{{item.img}}" mode="widthFix"></image><view class="_p">{{item.title}}</view></navigator></block></view></view>

@@ -36,7 +36,7 @@
           align-items: center;
   -webkit-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  padding: 20rpx;
+  padding: 20px;
 }
 .left.data-v-73aaf587 {
   display: -webkit-box;
@@ -55,15 +55,27 @@
 }
 .left .img.data-v-73aaf587 {
   border-radius: 100%;
-  width: 200rpx;
-  height: 200rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.right.data-v-73aaf587 {
+  width: 120rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .span_right.data-v-73aaf587 {
-  font-size: 0.8em;
+  font-size: 0.8px;
   /*大小*/
   padding: 0.4em;
-  width: 30rpx;
-  height: 30rpx;
+  width: 10px;
+  height: 10px;
   border-top: 3px solid #b9b9b9;
   /*上面的线条*/
   border-right: 3px solid #b9b9b9;

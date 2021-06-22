@@ -30,7 +30,7 @@
 	}
 	.search_box{
 		// padding: 10rpx;
-		background-color: #cecece;
+		background-color: #f4f4f4;
 		border-radius: 10rpx;
 		display: flex;
 		justify-content: center;

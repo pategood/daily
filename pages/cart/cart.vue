@@ -1,7 +1,6 @@
 <template>
 	<view>
 		<Location></Location>
-		购物车
 	</view>
 </template>
 
